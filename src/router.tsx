@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
-import { Home } from './pages/Home';
-import { NotFound } from './pages/NotFound';
-import { Contact } from './pages/Contact';
-import { Booking } from './pages/Booking';
+import { Home } from './components/pages/Home';
+import { NotFound } from './components/pages/NotFound';
+import { Contact } from './components/pages/Contact';
+import { Booking } from './components/pages/Booking';
 
 export const router = createBrowserRouter([
 	{
