@@ -5,7 +5,7 @@ export const Home = () => {
 		// TEST CODE
 		<>
 			<p>Home</p>
-			<Link to='/Booking'>Go to booking</Link>
+			<Link to='/booking'>Go to booking</Link>
 		</>
 	);
 };

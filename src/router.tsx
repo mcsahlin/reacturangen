@@ -4,6 +4,7 @@ import { Home } from './components/pages/Home';
 import { NotFound } from './components/pages/NotFound';
 import { Contact } from './components/pages/Contact';
 import { Booking } from './components/pages/Booking';
+import { Admin } from './components/pages/Admin';
 
 export const router = createBrowserRouter([
 	{
@@ -17,12 +18,16 @@ export const router = createBrowserRouter([
 				index: true,
 			},
 			{
-				path: '/Booking',
+				path: '/booking',
 				element: <Booking />,
 			},
 			{
-				path: '/Contact',
+				path: '/contact',
 				element: <Contact />,
+			},
+			{
+				path: '/admin',
+				element: <Admin />,
 			},
 		],
 	},
