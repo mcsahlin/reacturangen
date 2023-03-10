@@ -23,8 +23,6 @@ export const BookingCalendar = () => {
 		'December',
 	];
 
-	('Thu 3 2012 ');
-
 	const dayTranslator = (): string => {
 		switch (daySlice) {
 			case 'Mon':

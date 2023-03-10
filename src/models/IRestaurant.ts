@@ -1,7 +1,7 @@
-export interface IRestaurant {
-	name: string;
-	address: IAddress;
-}
+// export interface IRestaurant {
+// 	name: string;
+// 	address: IAddress;
+// }
 
 export interface IAddress {
 	street: string;
@@ -9,4 +9,12 @@ export interface IAddress {
 	city: string;
 }
 
-const reacturangen: IRestaurant; // api
+export interface IRestaurant {
+	id: string;
+	name: string;
+	address: string;
+	zip: string;
+	city: string;
+}
+
+// const reacturangen: IRestaurant; // api
