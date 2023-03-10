@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { initBiz } from '../../services/restaurantService';
 import { useState, useEffect } from 'react';
 
 export const Home = () => {
@@ -7,9 +6,9 @@ export const Home = () => {
 
 	useEffect(() => {
 		if (!loading) return;
-		initBiz();
+		// inits
 		setLoading(false);
-	}, []); // Company initialized
+	}, []);
 
 	return (
 		// TEST CODE
