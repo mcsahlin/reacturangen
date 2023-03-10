@@ -50,10 +50,11 @@ export const initBiz = () => {
 	});
 };
 
-const callApi = async <T>(url: string) => {
-	let response = await axios.get<T>(`${BASE_URL}${url}`);
-	return response.data;
-};
+// ! Avmarkera för användning
+// const callApi = async <T>(url: string) => {
+// 	let response = await axios.get<T>(`${BASE_URL}${url}`);
+// 	return response.data;
+// };
 
 export const getBiz = async (): Promise<AxiosResponse<IBiz>> => {
 	let response = await axios.get<AxiosResponse<IBiz>>(

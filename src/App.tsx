@@ -4,12 +4,8 @@ import { Outlet } from 'react-router-dom';
 import { initBiz } from './services/restaurantService';
 
 function App() {
-	const [loading, setLoading] = useState<boolean>(true);
-
 	useEffect(() => {
-		if (!loading) return;
 		initBiz(); // Initalize company database
-		setLoading(false);
 	});
 
 	return (
