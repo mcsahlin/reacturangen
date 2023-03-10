@@ -1,10 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
-import { useState } from 'react';
 import { IBiz } from '../models/IBiz';
 
 //**** KEYS ****//
-export const BASE_URL: string =
-	'https://school-restaurant-api.azurewebsites.net';
+const BASE_URL: string = 'https://school-restaurant-api.azurewebsites.net';
 let keyHolder: string = '';
 const bizKey: string = keyHolder;
 let bookingId: string = ''; //! Placeholder - value should be assigned by function
