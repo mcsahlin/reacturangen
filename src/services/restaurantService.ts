@@ -5,7 +5,8 @@ import { IBiz } from '../models/IBiz';
 //**** KEYS ****//
 export const BASE_URL: string =
 	'https://school-restaurant-api.azurewebsites.net';
-const [bizKey, setBizKey] = useState<string>('');
+let keyHolder: string = '';
+const bizKey: string = keyHolder;
 let bookingId: string = ''; //! Placeholder - value should be assigned by function
 let customerId: string = ''; //! Placeholder - value should be assigned by function
 
@@ -46,11 +47,12 @@ export const initBiz = () => {
 			console.log(err);
 		});
 	res.then((key) => {
-		setBizKey(key);
+		keyHolder = key;
 	});
 };
 
 // ! Avmarkera för användning
+// ? sdf
 // const callApi = async <T>(url: string) => {
 // 	let response = await axios.get<T>(`${BASE_URL}${url}`);
 // 	return response.data;
