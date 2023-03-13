@@ -49,8 +49,7 @@ export const initBiz = () => {
 	});
 };
 
-// ! Avmarkera för användning
-// ? sdf
+// TODO# Base call, ready
 // const callApi = async <T>(url: string) => {
 // 	let response = await axios.get<T>(`${BASE_URL}${url}`);
 // 	return response.data;
