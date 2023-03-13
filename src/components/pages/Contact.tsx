@@ -5,7 +5,6 @@ export const Contact = () => {
 		// TEST CODE
 		<>
 			<p>Contact</p>
-			<Link to='/'>Back to home</Link>
 		</>
 	);
 };

@@ -14,7 +14,6 @@ export const Home = () => {
 		// TEST CODE
 		<>
 			<p>Home</p>
-			<Link to='/booking'>Go to booking</Link>
 		</>
 	);
 };
