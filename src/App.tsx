@@ -1,11 +1,19 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { Outlet } from 'react-router-dom';
+import { initBiz } from './services/restaurantService';
+import { Navbar } from './components/pages/Navbar';
 
 function App() {
+	useEffect(() => {
+		initBiz(); // Initalize company database
+	});
+
 	return (
 		<>
-			<header></header>
+			<header>
+				<Navbar />
+			</header>
 			<main>
 				<Outlet></Outlet>
 			</main>
