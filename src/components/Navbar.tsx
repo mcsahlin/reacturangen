@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavbarContainer, LeftContainer, RightContainer, NavbarInnerContainer, NavbarExtendedContainer, NavbarLinkContainer, NavbarLinks, Logo, OpenLinksButton, NavbarLinksExtended } from '../../styles/Navbar.style';
+import { NavbarContainer, LeftContainer, RightContainer, NavbarInnerContainer, NavbarExtendedContainer, NavbarLinkContainer, NavbarLinks, Logo, OpenLinksButton, NavbarLinksExtended } from '../styles/Navbar.style';
 // import LogoImg from "../../assets/logo.png";
 
 export const Navbar = () => {

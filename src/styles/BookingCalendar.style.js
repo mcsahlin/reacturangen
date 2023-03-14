@@ -25,7 +25,6 @@ color: white;
 
 export const DaysContainer = styled.div`
 letter-spacing: 3px;
-
 `;
 
 
