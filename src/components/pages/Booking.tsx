@@ -6,6 +6,7 @@ export const Booking = () => {
 		// TEST CODE
 		<>
 			<p>Booking</p>
+			<Link to='/contact'>Go to Contact</Link>
 			<BookingCalendar />
 		</>
 	);

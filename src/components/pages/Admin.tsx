@@ -4,6 +4,7 @@ export const Admin = () => {
 		// TEST CODE
 		<>
 			<p>Admin</p>
+			<Link to='/'>Exit admin, back to home</Link>
 		</>
 	);
 };

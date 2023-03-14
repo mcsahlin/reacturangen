@@ -1,21 +1,21 @@
 import { Link } from 'react-router-dom';
+import { initBiz } from '../../services/restaurantService';
 import { useState, useEffect } from 'react';
-import { StartBackground } from '../StartBackground';
-
 
 export const Home = () => {
 	const [loading, setLoading] = useState<boolean>(true);
 
 	useEffect(() => {
 		if (!loading) return;
-		// inits
+		initBiz();
 		setLoading(false);
-	}, []);
+	}, []); // Company initialized
 
 	return (
 		// TEST CODE
 		<>
-			<StartBackground/>
+			<p>Home</p>
+			<Link to='/booking'>Go to booking</Link>
 		</>
 	);
 };
