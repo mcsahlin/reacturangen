@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Outlet } from 'react-router-dom';
-import { getBookings, initBiz } from './services/restaurantService';
-import { Navbar } from './components/pages/Navbar';
+import { initBiz } from './services/restaurantService';
+import { Navbar } from './components/Navbar';
 
 function App() {
 	useEffect(() => {
