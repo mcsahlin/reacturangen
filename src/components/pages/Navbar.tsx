@@ -5,6 +5,10 @@ import { NavbarContainer, LeftContainer, RightContainer, NavbarInnerContainer, N
 export const Navbar = () => {
 const [extendBurger, setExtendedBurger] = useState(false);
 
+const handleClick = () => {
+    
+}
+
     return (
         <>
         <NavbarContainer extendBurger={extendBurger}>
@@ -28,9 +32,9 @@ const [extendBurger, setExtendedBurger] = useState(false);
             </NavbarInnerContainer>
             {extendBurger &&
                 <NavbarExtendedContainer>
-                    <NavbarLinksExtended to="/">Hem</NavbarLinksExtended>
-                    <NavbarLinksExtended to="/booking">Boka bord</NavbarLinksExtended>
-                    <NavbarLinksExtended to="/contact">Kontakt oss</NavbarLinksExtended>
+                    <NavbarLinksExtended onClick={handleClick} to="/">Hem</NavbarLinksExtended>
+                    <NavbarLinksExtended onClick={handleClick} to="/booking">Boka bord</NavbarLinksExtended>
+                    <NavbarLinksExtended onClick={handleClick} to="/contact">Kontakt oss</NavbarLinksExtended>
             </NavbarExtendedContainer>
             }
         </NavbarContainer>
