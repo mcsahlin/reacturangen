@@ -9,28 +9,101 @@ let bookingId: string = ''; //! Placeholder - value should be assigned by functi
 let customerId: string = ''; //! Placeholder - value should be assigned by function
 
 //**** GET ****//
-const getRestaurant: string = `/restaurant${bizKey}`;
-const getAllBookings: string = `/booking/restaurant/${bizKey}`;
-const getBooking: string = `/booking/${bookingId}`; //! Not static! (bookingId)
-const getCustomer: string = `/booking/${customerId}`; //! Not static! (customerId)
+const GET_RESTAURANT_URL: string = BASE_URL + `/restaurant${bizKey}`;
+const GET_BOOKINGS_URL: string = BASE_URL + `/booking/restaurant/${bizKey}`;
+const GET_BOOKING_URL: string = BASE_URL + `/booking/${bookingId}`; //! Not static! (bookingId)
+const GET_CUSTOMER_URL: string = BASE_URL + `/booking/${customerId}`; //! Not static! (customerId)
 
 //**** POST ****//
-export const createRestaurant: string = '/restaurant/create';
-const createCustomer: string = '/customer/create';
-const createBooking: string = '/booking/create';
+export const CREATE_RESTAURANT_URL: string = BASE_URL + '/restaurant/create';
+const createCustomer: string = BASE_URL + '/customer/create';
+const createBooking: string = BASE_URL + '/booking/create';
 
 //**** PUT ****//**** ADMIN ****//
-const updateBooking: string = `/booking/update${bookingId}`; //! Not static! (bookingId)
-const updateCustomer: string = `/customer/update${customerId}`; //! Not static! (customerId)
+const updateBooking: string = BASE_URL + `/booking/update${bookingId}`; //! Not static! (bookingId)
+const updateCustomer: string = BASE_URL + `/customer/update${customerId}`; //! Not static! (customerId)
 
 //**** DELETE ****//**** ADMIN ****//
-const deleteBooking: string = `/booking/delete${bookingId}`; //! Not static! (bookingId)
+const deleteBooking: string = BASE_URL + `/booking/delete${bookingId}`; //! Not static! (bookingId)
 
 //---------------------------------------------------------------------------//
 
+//* Base call
+const apiCall = async <T>(url: string) => {
+	let response = await axios.get<T>(url);
+	return response.data;
+};
+
+//TODO# Test
+//#region getBooking
+interface IBooking {
+	id: string;
+	restaurantId: string;
+	date: string;
+	time: string;
+	numberOfGuests: number;
+	customerId: string;
+}
+export const getBooking = async (): Promise<AxiosResponse<IBooking>> => {
+	const response: IBooking | any = await apiCall<AxiosResponse<IBooking>>(
+		GET_BOOKING_URL
+	).then((res) => {
+		return res.data as IBooking;
+	});
+	// .then((data) => {
+	// 	// booking.id = data.id;
+	// 	// booking.customerId = data.customerId;
+	// 	// booking.date = data.date;
+	// 	// booking.numberOfGuests = data.numberOfGuests;
+	// 	// booking.restaurantId = data.restaurantId;
+	// 	// booking.time = data.time;
+	// })
+	return response;
+};
+//#endregion getBooking
+
+//#region getBookings
+interface IBookings {
+	bookings: IBooking[];
+}
+export const getBookings = async (): Promise<AxiosResponse<IBooking[]>> => {
+	const response: IBooking[] | any = await apiCall<AxiosResponse<IBooking[]>>(
+		GET_BOOKINGS_URL
+	).then((res) => {
+		return res.data as IBooking[];
+	});
+	return response;
+};
+//#endregion getBookings
+
+//#region getCustomers
+interface ICustomer {
+	id: string;
+	name: string;
+	lastname: string;
+	email: string;
+	phone: string;
+}
+export const getCustomer = async (): Promise<AxiosResponse<ICustomer>> => {
+	const response: IBooking | any = await apiCall<AxiosResponse<ICustomer>>(
+		GET_CUSTOMER_URL
+	).then((res) => {
+		return res.data as ICustomer;
+	});
+	return response;
+};
+//#endregion getCustomer
+
+//#region getRestaurant
+export const getRestaurant = async (): Promise<AxiosResponse<IBiz>> => {
+	let response = await axios.get<AxiosResponse<IBiz>>(GET_RESTAURANT_URL);
+	return response.data;
+};
+//#endregion getRestaurant
+
 export const initBiz = () => {
 	const res = axios
-		.post(`${BASE_URL}${createRestaurant}`, {
+		.post(CREATE_RESTAURANT_URL, {
 			name: 'Reacturangen',
 			address: {
 				street: 'Reactsvängen 101',
@@ -47,17 +120,4 @@ export const initBiz = () => {
 	res.then((key) => {
 		keyHolder = key;
 	});
-};
-
-// TODO# Base call, ready
-// const callApi = async <T>(url: string) => {
-// 	let response = await axios.get<T>(`${BASE_URL}${url}`);
-// 	return response.data;
-// };
-
-export const getBiz = async (): Promise<AxiosResponse<IBiz>> => {
-	let response = await axios.get<AxiosResponse<IBiz>>(
-		`${BASE_URL + getRestaurant}`
-	);
-	return response.data;
 };
