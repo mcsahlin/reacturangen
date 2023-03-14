@@ -16,6 +16,14 @@ background-color: #2C2F33;
 border-radius: 6px;
 `;
 
+export const ArrowRight = styled.img`
+
+`;
+
+export const ArrowLeft = styled.img`
+
+`;
+
 export const BannerContainer = styled.div`
 letter-spacing: 3px;
 border-bottom: 1px solid #CED3DC;
