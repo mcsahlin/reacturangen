@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { CalenderContainer, BannerContainer, BorderContainer, DaysContainer, DaysBorderBoxes, DateBorderBox, TableBody} from '../../src/styles/Booking.style';
+import { CalenderContainer, BannerContainer, BorderContainer, DaysContainer, DaysBorderBoxes, DateBorderBox, TableBody} from '../styles/BookingCalender.style';
 
 export const BookingCalendar = () => {
 	const [loading, setLoading] = useState<boolean>(true);

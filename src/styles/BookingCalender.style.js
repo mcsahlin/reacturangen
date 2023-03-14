@@ -12,12 +12,13 @@ flex-direction: column;
 align-items: center;
 width: 450px;
 height: 450px;
-background-color: rgba(206, 211, 220, 0.8);
+background-color: rgba(206, 211, 220);
 border-radius: 6px;
 `;
 
 export const BannerContainer = styled.div`
 letter-spacing: 3px;
+border-bottom: 1px solid #2C2F33;
 `;
 
 export const DaysContainer = styled.div`
@@ -44,7 +45,7 @@ transition: .5s all;
 
 &:hover{
     background-color: #CED3DC;
-    box-shadow: 0 0 3px 0;
+    box-shadow: 0 3px 6px 0;
 }
 `;
 
