@@ -40,7 +40,6 @@ export const NavbarLinkContainer = styled.div`
 export const NavbarLinks = styled(Link)`
   color: white;
   font-size: 1.3rem;
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 10px;
 
@@ -52,7 +51,6 @@ export const NavbarLinks = styled(Link)`
 export const NavbarLinksExtended = styled(Link)`
   color: white;
   font-size: x-large;
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 10px;
 `;
