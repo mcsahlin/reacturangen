@@ -8,10 +8,7 @@ function App() {
 	useEffect(() => {
 		initBiz(); // Initalize company database
 	});
-	const bookings = getBookings();
-	bookings.then((a) => {
-		return a.data;
-	});
+
 	return (
 		<>
 			<header>
