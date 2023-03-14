@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { CalenderContainer, BannerContainer, ArrowRight, ArrowLeft, BorderContainer, DaysContainer, DaysBorderBoxes, DateBorderBox, TableBody} from '../styles/BookingCalender.style';
+import { CalendarContainer, BannerContainer, BorderContainer, DaysContainer, DaysBorderBoxes, DateBorderBox, TableBody } from '../styles/BookingCalendar.style';
 
 export const BookingCalendar = () => {
 	const [loading, setLoading] = useState<boolean>(true);
@@ -53,15 +53,13 @@ export const BookingCalendar = () => {
 	}, []);
 
 	return (
-		<CalenderContainer>
+		<CalendarContainer>
 			<BorderContainer>
-				<ArrowRight>x</ArrowRight>
 			<BannerContainer>
 				<h3>
 					{dayTranslator()} den {day} {months[month]}, {year}
 				</h3>
 			</BannerContainer>
-				<ArrowLeft>x</ArrowLeft>
 			<DaysContainer>
 				<table className='cal__table'>
 					<thead>
@@ -126,6 +124,6 @@ export const BookingCalendar = () => {
 				</table>
 			</DaysContainer>
 			</BorderContainer>
-		</CalenderContainer>
+		</CalendarContainer>
 	);
 };

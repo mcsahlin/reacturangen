@@ -1,5 +1,5 @@
-import { BookingCalendar } from '../BookingCalendar';
 import { BookingHeading, BookingContainer } from '../../styles/BookingPage.style';
+import { BookingCalendar } from '../BookingCalendar';
 
 export const Booking = () => {
 	return (
@@ -8,9 +8,6 @@ export const Booking = () => {
 		<BookingContainer>
 			<BookingHeading >Booking</BookingHeading>
 			<BookingCalendar />
-			<>
-			<img src='' alt=''/>
-			</>
 		</BookingContainer>
 		</>
 	);
