@@ -12,7 +12,6 @@ export const StartBackground = () => {
                 <H1>REACTAURANGEN</H1>
                 <video autoPlay loop muted playsInline height="100%" width="100%" preload="auto" >
                     <source src={HomeVideo} type="video/mp4"/>
-                    <source src={HomeVideo} type="video/webm"/>
                     Your browser does not support HTML5 videos
                 </video>
             </Wrapper>

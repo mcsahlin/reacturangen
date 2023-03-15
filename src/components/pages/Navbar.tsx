@@ -7,7 +7,7 @@ const [extendBurger, setExtendedBurger] = useState(false);
 
     return (
         <>
-        <NavbarContainer extendBurger={extendBurger}>
+        <NavbarContainer>
             <NavbarInnerContainer>
             <LeftContainer>
             {/* <Logo src={LogoImg}></Logo> */}
