@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { StartBackground } from '../StartBackground';
+import { HomeVideoBackground } from '../HomeVideoBackground';
+import { HomeInfo } from '../HomeInfo';
+import { HomeSecondBackground } from '../HomeSecondBackground';
+
+
 
 
 export const Home = () => {
@@ -15,7 +19,9 @@ export const Home = () => {
 	return (
 		// TEST CODE
 		<>
-			<StartBackground/>
+			<HomeVideoBackground/>
+			<HomeInfo/>
+			<HomeSecondBackground/>
 		</>
 	);
 };

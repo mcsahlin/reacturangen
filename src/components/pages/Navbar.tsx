@@ -7,7 +7,7 @@ const [extendBurger, setExtendedBurger] = useState(false);
 
     return (
         <>
-        <NavbarContainer>
+         {/* <NavbarContainer> */}
             <NavbarInnerContainer>
             <LeftContainer>
             {/* <Logo src={LogoImg}></Logo> */}
@@ -33,7 +33,7 @@ const [extendBurger, setExtendedBurger] = useState(false);
                     <NavbarLinksExtended to="/contact">Kontakt oss</NavbarLinksExtended>
             </NavbarExtendedContainer>
             }
-        </NavbarContainer>
+        {/* </NavbarContainer> */}
         </>
     )
 }
