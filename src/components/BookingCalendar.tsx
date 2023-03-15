@@ -1,6 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { CalendarContainer, BannerContainer, BorderContainer, DaysContainer, DaysBorderBoxes, DateBorderBox, TableBody } from '../styles/BookingCalendar.style';
+import {
+	CalendarContainer,
+	BannerContainer,
+	BorderContainer,
+	DaysContainer,
+	DaysBorderBoxes,
+	DateBorderBox,
+	TableBody,
+} from './styled/BookingCalendar.style';
 
 export const BookingCalendar = () => {
 	const [loading, setLoading] = useState<boolean>(true);
@@ -55,74 +63,74 @@ export const BookingCalendar = () => {
 	return (
 		<CalendarContainer>
 			<BorderContainer>
-			<BannerContainer>
-				<h3>
-					{dayTranslator()} den {day} {months[month]}, {year}
-				</h3>
-			</BannerContainer>
-			<DaysContainer>
-				<table className='cal__table'>
-					<thead>
-						<tr>
-							<DaysBorderBoxes>Mån</DaysBorderBoxes>
-							<DaysBorderBoxes>Tis</DaysBorderBoxes>
-							<DaysBorderBoxes>Ons</DaysBorderBoxes>
-							<DaysBorderBoxes>Tor</DaysBorderBoxes>
-							<DaysBorderBoxes>Fre</DaysBorderBoxes>
-							<DaysBorderBoxes>Lör</DaysBorderBoxes>
-							<DaysBorderBoxes>Sön</DaysBorderBoxes>
-						</tr>
-					</thead>
-					<TableBody>
-						<tr className='cal__row cal__row--dates'>
-							{/*ROW 1*/}
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<DateBorderBox>1</DateBorderBox>
-							<DateBorderBox>2</DateBorderBox>
-							<DateBorderBox>3</DateBorderBox>
-						</tr>
-						<tr className='cal__row cal__row--dates'>
-							<DateBorderBox>4</DateBorderBox>
-							<DateBorderBox>5</DateBorderBox>
-							<DateBorderBox>6</DateBorderBox>
-							<DateBorderBox>7</DateBorderBox>
-							<DateBorderBox>8</DateBorderBox>
-							<DateBorderBox>9</DateBorderBox>
-							<DateBorderBox>10</DateBorderBox>
-						</tr>
-						<tr className='cal__row cal__row--dates'>
-							<DateBorderBox>11</DateBorderBox>
-							<DateBorderBox>12</DateBorderBox>
-							<DateBorderBox>13</DateBorderBox>
-							<DateBorderBox>14</DateBorderBox>
-							<DateBorderBox>15</DateBorderBox>
-							<DateBorderBox>16</DateBorderBox>
-							<DateBorderBox>17</DateBorderBox>
-						</tr>
-						<tr className='cal__row cal__row--dates'>
-							<DateBorderBox>18</DateBorderBox>
-							<DateBorderBox>19</DateBorderBox>
-							<DateBorderBox>20</DateBorderBox>
-							<DateBorderBox>21</DateBorderBox>
-							<DateBorderBox>22</DateBorderBox>
-							<DateBorderBox>23</DateBorderBox>
-							<DateBorderBox>24</DateBorderBox>
-						</tr>
-						<tr className='cal__row cal__row--dates'>
-							<DateBorderBox>25</DateBorderBox>
-							<DateBorderBox>26</DateBorderBox>
-							<DateBorderBox>27</DateBorderBox>
-							<DateBorderBox>28</DateBorderBox>
-							<DateBorderBox>29</DateBorderBox>
-							<DateBorderBox>30</DateBorderBox>
-							<DateBorderBox>31</DateBorderBox>
-						</tr>
-					</TableBody>
-				</table>
-			</DaysContainer>
+				<BannerContainer>
+					<h3>
+						{dayTranslator()} den {day} {months[month]}, {year}
+					</h3>
+				</BannerContainer>
+				<DaysContainer>
+					<table className='cal__table'>
+						<thead>
+							<tr>
+								<DaysBorderBoxes>Mån</DaysBorderBoxes>
+								<DaysBorderBoxes>Tis</DaysBorderBoxes>
+								<DaysBorderBoxes>Ons</DaysBorderBoxes>
+								<DaysBorderBoxes>Tor</DaysBorderBoxes>
+								<DaysBorderBoxes>Fre</DaysBorderBoxes>
+								<DaysBorderBoxes>Lör</DaysBorderBoxes>
+								<DaysBorderBoxes>Sön</DaysBorderBoxes>
+							</tr>
+						</thead>
+						<TableBody>
+							<tr className='cal__row cal__row--dates'>
+								{/*ROW 1*/}
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<DateBorderBox>1</DateBorderBox>
+								<DateBorderBox>2</DateBorderBox>
+								<DateBorderBox>3</DateBorderBox>
+							</tr>
+							<tr className='cal__row cal__row--dates'>
+								<DateBorderBox>4</DateBorderBox>
+								<DateBorderBox>5</DateBorderBox>
+								<DateBorderBox>6</DateBorderBox>
+								<DateBorderBox>7</DateBorderBox>
+								<DateBorderBox>8</DateBorderBox>
+								<DateBorderBox>9</DateBorderBox>
+								<DateBorderBox>10</DateBorderBox>
+							</tr>
+							<tr className='cal__row cal__row--dates'>
+								<DateBorderBox>11</DateBorderBox>
+								<DateBorderBox>12</DateBorderBox>
+								<DateBorderBox>13</DateBorderBox>
+								<DateBorderBox>14</DateBorderBox>
+								<DateBorderBox>15</DateBorderBox>
+								<DateBorderBox>16</DateBorderBox>
+								<DateBorderBox>17</DateBorderBox>
+							</tr>
+							<tr className='cal__row cal__row--dates'>
+								<DateBorderBox>18</DateBorderBox>
+								<DateBorderBox>19</DateBorderBox>
+								<DateBorderBox>20</DateBorderBox>
+								<DateBorderBox>21</DateBorderBox>
+								<DateBorderBox>22</DateBorderBox>
+								<DateBorderBox>23</DateBorderBox>
+								<DateBorderBox>24</DateBorderBox>
+							</tr>
+							<tr className='cal__row cal__row--dates'>
+								<DateBorderBox>25</DateBorderBox>
+								<DateBorderBox>26</DateBorderBox>
+								<DateBorderBox>27</DateBorderBox>
+								<DateBorderBox>28</DateBorderBox>
+								<DateBorderBox>29</DateBorderBox>
+								<DateBorderBox>30</DateBorderBox>
+								<DateBorderBox>31</DateBorderBox>
+							</tr>
+						</TableBody>
+					</table>
+				</DaysContainer>
 			</BorderContainer>
 		</CalendarContainer>
 	);
