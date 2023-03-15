@@ -18,7 +18,7 @@ export const Navbar = () => {
 
 	return (
 		<>
-			<NavbarContainer>
+			<NavbarContainer extendBurger={extendBurger}>
 				<NavbarInnerContainer>
 					<LeftContainer>
 						{/* <Logo src={LogoImg}></Logo> */}

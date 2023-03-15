@@ -11,4 +11,4 @@ interface INewBookingContext {
 		phone: string;
 	};
 }
-const NewBookingContext = React.createContext<INewBookingContext>({});
+// const NewBookingContext = React.createContext<INewBookingContext>({});
