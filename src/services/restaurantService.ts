@@ -3,8 +3,7 @@ import { IBiz } from '../models/IBiz';
 
 //**** KEYS ****//
 const BASE_URL: string = 'https://school-restaurant-api.azurewebsites.net';
-let keyHolder: string = '';
-export const bizKey: string = keyHolder;
+export const bizKey: string = '64121c14072ea76784085cba';
 let bookingId: string = ''; //! Placeholder - value should be assigned by function
 let customerId: string = ''; //! Placeholder - value should be assigned by function
 
