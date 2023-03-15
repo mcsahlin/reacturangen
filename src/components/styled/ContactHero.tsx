@@ -13,4 +13,6 @@ export const HeroSection = styled.section`
 export const InfoBox = styled.div`
 	background-color: black;
 	color: white;
+	width: 40%;
+	height: 80%;
 `;
