@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { StartBackground } from '../StartBackground';
+
 
 export const Home = () => {
 	const [loading, setLoading] = useState<boolean>(true);
@@ -13,7 +15,7 @@ export const Home = () => {
 	return (
 		// TEST CODE
 		<>
-			<p>Home</p>
+			<StartBackground/>
 		</>
 	);
 };
