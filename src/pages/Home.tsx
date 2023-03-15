@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { StartBackground } from '../components/StartBackground';
+import { HomeVideoBackground } from '../components/HomeVideoBackground';
+import { HomeInfo } from '../components/HomeInfo';
+import { HomeSecondBackground } from '../components/HomeSecondBackground';
+
 
 export const Home = () => {
 	const [loading, setLoading] = useState<boolean>(true);
@@ -14,7 +17,9 @@ export const Home = () => {
 	return (
 		// TEST CODE
 		<>
-			<StartBackground />
+			<HomeVideoBackground/>
+			<HomeInfo/>
+			<HomeSecondBackground/>
 		</>
 	);
 };
