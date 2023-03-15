@@ -7,12 +7,22 @@ export const HeroSection = styled.section`
 	height: 500px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: right;
 `;
 
 export const InfoBox = styled.div`
+	margin-right: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: Montserrat, sans-serif;
+	font-weight: 100;
+	gap: 30px;
 	background-color: black;
 	color: white;
-	width: 40%;
+	border-radius: 7px;
+	width: 30%;
 	height: 80%;
+	padding: 10px 20px;
+	font-weight: 100;
 `;
