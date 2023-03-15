@@ -10,7 +10,7 @@ import {
 	Logo,
 	OpenLinksButton,
 	NavbarLinksExtended,
-} from '../styles/Navbar.style';
+} from './../components/styled/Navbar.style';
 // import LogoImg from "../../assets/logo.png";
 
 export const Navbar = () => {
@@ -18,7 +18,7 @@ export const Navbar = () => {
 
 	return (
 		<>
-			<NavbarContainer>
+			<NavbarContainer extendBurger={extendBurger}>
 				<NavbarInnerContainer>
 					<LeftContainer>
 						{/* <Logo src={LogoImg}></Logo> */}

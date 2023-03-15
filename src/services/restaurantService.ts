@@ -4,7 +4,7 @@ import { IBiz } from '../models/IBiz';
 //**** KEYS ****//
 const BASE_URL: string = 'https://school-restaurant-api.azurewebsites.net';
 let keyHolder: string = '';
-const bizKey: string = keyHolder;
+export const bizKey: string = keyHolder;
 let bookingId: string = ''; //! Placeholder - value should be assigned by function
 let customerId: string = ''; //! Placeholder - value should be assigned by function
 

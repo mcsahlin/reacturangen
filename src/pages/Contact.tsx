@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { HeroSection, InfoBox } from '../components/styled/ContactHero';
 import {
-	InfoWrapper,
+	ContactInfoWrapper,
 	InfoDetailsWrapper,
 	InfoTimeWrapper,
 } from '../components/styled/Wrappers';
@@ -13,7 +13,7 @@ export const Contact = () => {
 		<>
 			<HeroSection>
 				<InfoBox>
-					<InfoWrapper>
+					<ContactInfoWrapper>
 						<Heading color='white' thin={true}>
 							KONTAKT
 						</Heading>
@@ -29,8 +29,8 @@ export const Contact = () => {
 							<span>Adress:</span>
 							<span>Reactsvängen 1, Stockholm</span>
 						</InfoDetailsWrapper>
-					</InfoWrapper>
-					<InfoWrapper>
+					</ContactInfoWrapper>
+					<ContactInfoWrapper>
 						<Heading color='white' thin={true}>
 							ÖPPETTIDER
 						</Heading>
@@ -66,7 +66,7 @@ export const Contact = () => {
 								<span>00</span>
 							</InfoTimeWrapper>
 						</InfoDetailsWrapper>
-					</InfoWrapper>
+					</ContactInfoWrapper>
 				</InfoBox>
 			</HeroSection>
 		</>
