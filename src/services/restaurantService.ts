@@ -118,6 +118,6 @@ export const initBiz = () => {
 			console.log(err);
 		});
 	res.then((key) => {
-		keyHolder = key;
+		return key;
 	});
 };
