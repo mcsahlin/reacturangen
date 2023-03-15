@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const NavbarContainer = styled.nav`
+interface Props {
+  extendBurger: boolean;
+}
+
+export const NavbarContainer = styled.nav<Props>`
   width: 100%;
-  height: ${(props) => (props.extendBurger ? "100vh" : "80px")};
+  height: ${(props: any) => (props.extendBurger ? "100vh" : "80px")};
   background-color: black;
   display: flex;
   flex-direction: column;
