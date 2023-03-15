@@ -20,7 +20,7 @@ export const Navbar = () => {
 
 	return (
 		<>
-			<NavbarContainer>
+			{/* <NavbarContainer> */}
 				<NavbarInnerContainer>
 					<LeftContainer>
 						{/* <Logo src={LogoImg}></Logo> */}
@@ -53,7 +53,7 @@ export const Navbar = () => {
 						</NavbarLinksExtended>
 					</NavbarExtendedContainer>
 				)}
-			</NavbarContainer>
+			{/* </NavbarContainer> */}
 		</>
 	);
 };
