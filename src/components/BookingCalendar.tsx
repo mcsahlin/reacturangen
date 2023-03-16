@@ -2,14 +2,19 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import {
 	CalendarContainer,
+	SeclectGuests,
+	Options,
 	BannerContainer,
 	BorderContainer,
 	DaysContainer,
 	DaysBorderBoxes,
 	DateBorderBox,
 	TableBody,
+	ButtonBooking,
 } from './styled/BookingCalendar.style';
-
+interface ICalendarProps {
+	selected: boolean;
+}
 export const BookingCalendar = () => {
 	const [loading, setLoading] = useState<boolean>(true);
 	const [year, setYear] = useState<number>(new Date().getFullYear());
@@ -17,6 +22,7 @@ export const BookingCalendar = () => {
 	const [day, setDay] = useState<number>(new Date().getDay());
 	const [dayOne, setDayOne] = useState<number>(day - (day - 1));
 	const [daySlice, setDayStr] = useState<string>(Date().slice(0, 3));
+	const [selectedDay, setSelectedDay] = useState<string>();
 	const months: string[] = [
 		'Januari',
 		'Februari',
@@ -60,8 +66,40 @@ export const BookingCalendar = () => {
 		setLoading(false);
 	}, []);
 
+	//#region set listener
+	//* Samla alla td element i en lista
+	const dayBox = document.getElementsByTagName('td');
+	//* Loopa igenom alla td element, fäst eventListener och uppdatera selectedDay statet;
+	for (let i = 0; i < dayBox.length; i++) {
+		const element = dayBox[i];
+		element.addEventListener('click', () => {
+			setSelectedDay(element.innerHTML);
+		});
+	}
+	//* useEffect lyssnar på förändring av statet selectedDay
+	useEffect(() => {
+		if (loading) return;
+		console.log(selectedDay, month, year);
+	}, [selectedDay]);
+	//#endregion set listener
+
+	//#region checkAvailability
+
+	//#endregion checkAvailability
 	return (
+		<>
 		<CalendarContainer>
+			<h4>Välj antal personer:</h4>
+			<SeclectGuests name='guests' id='guests'>
+				<Options value='1'>1</Options>
+				<Options value='2'>2</Options>
+				<Options value='3'>3</Options>
+				<Options value='4'>4</Options>
+				<Options value='5'>5</Options>
+				<Options value='6'>6</Options>
+				<Options value='7'>7</Options>
+				<Options value='8+'>8+</Options>
+			</SeclectGuests>
 			<BorderContainer>
 				<BannerContainer>
 					<h3>
@@ -133,5 +171,7 @@ export const BookingCalendar = () => {
 				</DaysContainer>
 			</BorderContainer>
 		</CalendarContainer>
+		<ButtonBooking className='btnB'>Boka nu</ButtonBooking>
+	</>
 	);
 };

@@ -5,6 +5,8 @@ import { NotFound } from './pages/NotFound';
 import { Contact } from './pages/Contact';
 import { Booking } from './pages/Booking';
 import { Admin } from './pages/Admin';
+import { BookingContext } from './contexts/BookingContext';
+import { INewBooking } from './models/INewBooking';
 
 export const router = createBrowserRouter([
 	{
