@@ -8,7 +8,7 @@ let bookingId: string = ''; //! Placeholder - value should be assigned by functi
 let customerId: string = ''; //! Placeholder - value should be assigned by function
 
 //**** GET ****//
-export const GET_RESTAURANT_URL: string = `/restaurant/${bizKey}`;
+export const GET_RESTAURANT_URL: string = `${BASE_URL}/restaurant/${bizKey}`;
 const GET_BOOKINGS_URL: string = `${BASE_URL}/booking/restaurant/${bizKey}`;
 const GET_BOOKING_URL: string = `${BASE_URL}/booking/${bookingId}`; //! Not static! (bookingId)
 const GET_CUSTOMER_URL: string = `${BASE_URL}/booking/${customerId}`; //! Not static! (customerId)
@@ -28,8 +28,8 @@ const deleteBooking: string = `${BASE_URL}/booking/delete${bookingId}`; //! Not 
 //---------------------------------------------------------------------------//
 
 //* Base call
-const apiCall = async <T>(urlTail: string) => {
-	let response = await axios.get<T>(`${BASE_URL}${urlTail}`);
+const apiCall = async <T>(url: string) => {
+	let response = await axios.get<T>(url);
 	return response;
 };
 
