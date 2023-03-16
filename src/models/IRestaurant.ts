@@ -1,14 +1,3 @@
-// export interface IRestaurant {
-// 	name: string;
-// 	address: IAddress;
-// }
-
-export interface IAddress {
-	street: string;
-	zip: string;
-	city: string;
-}
-
 export interface IRestaurant {
 	id: string;
 	name: string;
@@ -16,5 +5,3 @@ export interface IRestaurant {
 	zip: string;
 	city: string;
 }
-
-// const reacturangen: IRestaurant; // api

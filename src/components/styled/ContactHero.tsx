@@ -8,6 +8,7 @@ export const HeroSection = styled.section`
 	display: flex;
 	align-items: center;
 	justify-content: right;
+	border-bottom: 5px solid black;
 `;
 
 export const InfoBox = styled.div`
@@ -22,7 +23,7 @@ export const InfoBox = styled.div`
 	color: white;
 	border-radius: 7px;
 	width: 30%;
-	height: 80%;
+	height: 95vh;
 	padding: 10px 20px;
 	font-weight: 100;
 `;

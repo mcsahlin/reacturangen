@@ -3,13 +3,13 @@ import {
 	BookingContainer,
 } from './../components/styled/BookingPage.style';
 import { BookingCalendar } from '../components/BookingCalendar';
-
+import { GuestCountSelector } from '../components/GuestCountSelector';
 export const Booking = () => {
 	return (
-		// TEST CODE
 		<>
 			<BookingContainer>
 				<BookingHeading>Booking</BookingHeading>
+				<GuestCountSelector />
 				<BookingCalendar />
 			</BookingContainer>
 		</>
