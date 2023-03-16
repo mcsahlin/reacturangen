@@ -59,14 +59,14 @@ export const InfoWrapper = styled(Wrapper)`
 `;
 
 export const TextWrapper = styled.p`
-	height: 40vh;
-	width: 30vh;
+	height: 600px;
+	width: 300px;
 	padding: 40px;
 	border: 1px solid black;
 	border-radius: 20px;
 
 	@media (min-width: 700px) {
-		height: 50vh;
+		height: 550px;
 	}
 `;
 
