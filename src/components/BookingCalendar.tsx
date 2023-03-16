@@ -1,4 +1,5 @@
 import React from 'react';
+import { eachDayOfInterval, format } from 'date-fns';
 import { useState, useEffect, useContext } from 'react';
 import { BookingContext } from '../contexts/BookingContext';
 import {
@@ -22,11 +23,29 @@ export const BookingCalendar = () => {
 	const [year, setYear] = useState<number>(new Date().getFullYear());
 	const [month, setMonth] = useState<number>(new Date().getMonth());
 	const [day, setDay] = useState<number>(new Date().getDay());
-	const [dayOne, setDayOne] = useState<number>(day - (day - 1));
 	const [daySlice, setDayStr] = useState<string>(Date().slice(0, 3));
+	const [selectedDate, setSelectedDate] = useState<string>();
+	const [selectedTime, setSelectedTime] = useState<string>();
+	const [selectedGuestCount, setSelectedGuestCount] = useState<string>();
 	const [selectedDay, setSelectedDay] = useState<string>();
 	const bookingContext = useContext(BookingContext);
-	const { setNumberOfGuests, setDate, setTime } = bookingContext;
+	const { setNumberOfGuests, setDate, setTime, date } = bookingContext;
+	const startDate = new Date();
+	const endDate = new Date();
+	endDate.setMonth(startDate.getMonth() + 1);
+	const dates = eachDayOfInterval({ start: startDate, end: endDate });
+	const dateOptions = dates.map((date) => (
+		<option
+			onClick={() => {
+				setDate(format(date, 'yyyy-MM-dd'));
+				console.log(date);
+			}}
+			key={date.getTime()}
+			value={format(date, 'yyyy-MM-dd')}
+		>
+			{format(date, 'EEEE, MMMM d')}
+		</option>
+	));
 	const today = now;
 	const months: string[] = [
 		'Januari',
@@ -124,6 +143,42 @@ export const BookingCalendar = () => {
 		<>
 			<CalendarContainer>
 				<h4>Välj antal personer:</h4>
+				<div>
+					<label htmlFor='dateOptions'>Datum: </label>
+					<select id='dateOptions' onChange={(e: React.ChangeEvent) => {}}>
+						{dateOptions}
+					</select>
+				</div>
+				<div>
+					<label htmlFor='timeOptions'>Antal personer: </label>
+					<select id='timeOptions'>
+						<option>18:00</option>
+						<option>21:00</option>
+					</select>
+				</div>
+				<div>
+					<label htmlFor='guestCount'>Antal personer: </label>
+					<select id='guestCount'>
+						<option selected value={1}>
+							1
+						</option>
+						<option selected value={2}>
+							2
+						</option>
+						<option selected value={3}>
+							3
+						</option>
+						<option selected value={4}>
+							4
+						</option>
+						<option selected value={5}>
+							5
+						</option>
+						<option selected value={6}>
+							6
+						</option>
+					</select>
+				</div>
 				<GuestCountWrapper>
 					<GuestCountBtn>-</GuestCountBtn>
 					<SelectGuests
