@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { HomeVideoBackground } from '../components/HomeVideoBackground';
 import { HomeInfo } from '../components/HomeInfo';
 import { HomeSecondBackground } from '../components/HomeSecondBackground';
-
+import { AdminContext } from '../contexts/AdminContext';
 
 export const Home = () => {
 	const [loading, setLoading] = useState<boolean>(true);
+	const [admin, setAdmin] = useState(false);
+	const adminContext = useContext(AdminContext);
 
 	useEffect(() => {
 		if (!loading) return;
@@ -17,9 +19,9 @@ export const Home = () => {
 	return (
 		// TEST CODE
 		<>
-			<HomeVideoBackground/>
-			<HomeInfo/>
-			<HomeSecondBackground/>
+			<HomeVideoBackground />
+			<HomeInfo />
+			<HomeSecondBackground />
 		</>
 	);
 };
