@@ -129,6 +129,7 @@ export const FontWrapper = styled.div`
 `;
 
 export const FooterWrapper = styled.div`
+	border-top: 6px solid white;
 	background-color:#2C2F33;
 	height: 90vh;
 	width: 100%;
