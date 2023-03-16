@@ -23,6 +23,7 @@ export const CustomerRegistrationForm = (props: IFormProps) => {
 		email: '',
 		phone: '',
 	});
+
 	const handleFormChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		// Get the name of the field that caused this change event
 		// Get the new value of this field
@@ -47,7 +48,7 @@ export const CustomerRegistrationForm = (props: IFormProps) => {
 			{/* <CustomerContext.Provider> */}
 			<Form>
 				<DualInputWrapper>
-					<UserInput placerholder='Förnamn'></UserInput>
+					<UserInput placerholder='Förnamn' onChange={(e: Event) => {}}></UserInput>
 
 					<UserInput placerholder='Efternamn'></UserInput>
 				</DualInputWrapper>
