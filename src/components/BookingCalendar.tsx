@@ -11,6 +11,7 @@ import {
 	DateBorderBox,
 	TableBody,
 } from './styled/BookingCalendar.style';
+import { ButtonBooking } from './styled/Buttons';
 interface ICalendarProps {
 	selected: boolean;
 }
@@ -58,9 +59,6 @@ export const BookingCalendar = () => {
 		11: 30,
 		12: 31,
 	};
-
-	let monthNumber;
-	dateObj[1];
 
 	const dayTranslator = (): string => {
 		switch (daySlice) {

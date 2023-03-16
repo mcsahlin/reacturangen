@@ -17,7 +17,7 @@ export const Booking = () => {
 			<BookingProvider>
 				<BookingContainer>
 					<BookingHeading>Booking</BookingHeading>
-					<GuestCountSelector />
+					{/* <GuestCountSelector /> */}
 					<BookingCalendar />
 					<CustomerRegistrationForm children={undefined} />
 				</BookingContainer>
