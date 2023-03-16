@@ -12,6 +12,7 @@ export const FormWrapper = styled.div`
     );
 `;
 
+
 export const Form = styled.form`
 	width: 50%;
 	display: flex;

@@ -137,7 +137,6 @@ export const FooterWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	border-top: 6px solid white;
 
 	@media (min-width: 700px) {
 		height: 60vh;
