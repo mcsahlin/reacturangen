@@ -27,7 +27,7 @@ export const UserInput = styled.input.attrs((props: IInputProps) => ({
 		border-bottom: 3px solid green;
 	}
 	&:focus:invalid {
-		border-bottom: 3px solid #E70D52;
+		border-bottom: 3px solid #e70d52;
 	}
 
 	&:placeholder-shown {

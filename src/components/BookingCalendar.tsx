@@ -1,9 +1,9 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { BookingContext } from '../contexts/BookingContext';
 import {
 	CalendarContainer,
-	SeclectGuests,
-	Options,
+	SeclectGuests as SelectGuests,
 	BannerContainer,
 	BorderContainer,
 	DaysContainer,
@@ -11,7 +11,8 @@ import {
 	DateBorderBox,
 	TableBody,
 } from './styled/BookingCalendar.style';
-import { ButtonBooking } from './styled/Buttons';
+import { ButtonBooking, GuestCountBtn } from './styled/Buttons';
+import { GuestCountWrapper } from './styled/Wrappers';
 interface ICalendarProps {
 	selected: boolean;
 }
@@ -24,6 +25,8 @@ export const BookingCalendar = () => {
 	const [dayOne, setDayOne] = useState<number>(day - (day - 1));
 	const [daySlice, setDayStr] = useState<string>(Date().slice(0, 3));
 	const [selectedDay, setSelectedDay] = useState<string>();
+	const bookingContext = useContext(BookingContext);
+	const { setNumberOfGuests, setDate, setTime } = bookingContext;
 	const today = now;
 	const months: string[] = [
 		'Januari',
@@ -86,7 +89,6 @@ export const BookingCalendar = () => {
 	// 	const element = array[i];
 	// }
 
-	console.log(now.getDate());
 	useEffect(() => {
 		if (!loading) return;
 		setDay(new Date().getDay());
@@ -106,25 +108,31 @@ export const BookingCalendar = () => {
 	//* useEffect lyssnar på förändring av statet selectedDay
 	useEffect(() => {
 		if (loading) return;
-		console.log(selectedDay, month, year);
+		console.log(selectedDay, now, year);
 	}, [selectedDay]);
 	//#endregion set listener
 
 	//#region checkAvailability
 
 	//#endregion checkAvailability
+
+	const handleChange = (e: React.ChangeEvent) => {
+		console.log(e.currentTarget.ariaValueNow);
+	};
+
 	return (
 		<>
 			<CalendarContainer>
 				<h4>Välj antal personer:</h4>
-				<SeclectGuests name='guests' id='guests'>
-					<Options value='1'>1</Options>
-					<Options value='2'>2</Options>
-					<Options value='3'>3</Options>
-					<Options value='4'>4</Options>
-					<Options value='5'>5</Options>
-					<Options value='6'>6</Options>
-				</SeclectGuests>
+				<GuestCountWrapper>
+					<GuestCountBtn>-</GuestCountBtn>
+					<SelectGuests
+						name='guests'
+						id='guests'
+						onChange={(e: React.ChangeEvent) => handleChange(e)}
+					/>
+					<GuestCountBtn>+</GuestCountBtn>
+				</GuestCountWrapper>
 				<BorderContainer>
 					<BannerContainer>
 						<h3>
