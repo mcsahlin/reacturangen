@@ -4,51 +4,48 @@ import { useState, useContext, useEffect } from 'react';
 import { BookingContext } from '../contexts/BookingContext';
 
 export const GuestCountSelector = () => {
-	const [guestCount, setGuestCount] = useState<number>(NaN);
+	const [loading, setLoading] = useState<boolean>(true);
+	const [guestCount, setGuestCount] = useState<number>();
 	const bookingContext = useContext(BookingContext);
 
 	useEffect(() => {
-		bookingContext.setNumberOfGuests(guestCount);
+		if (!loading) return;
+		const setListners = () => {
+			let elemList = document.getElementsByName('guestCount');
+			for (let i = 0; i < elemList.length; i++) {
+				const element = elemList[i];
+				element.addEventListener('click', () => {
+					setGuestCount(+element.innerHTML);
+				});
+			}
+		};
+		setListners();
+		setLoading(false);
+	}, []);
+
+	useEffect(() => {
+		console.log(guestCount);
 	}, [guestCount]);
+
+	const handleChecked = (value: number) => {
+		setGuestCount(value);
+	};
 
 	return (
 		<GuestCountWrapper>
-			<GuestCountRadio
-				value={1}
-				onClick={() => {
-					setGuestCount(1);
-				}}
-			></GuestCountRadio>
-			<GuestCountRadio
-				value={2}
-				onClick={() => {
-					setGuestCount(2);
-				}}
-			></GuestCountRadio>
-			<GuestCountRadio
-				value={3}
-				onClick={() => {
-					setGuestCount(3);
-				}}
-			></GuestCountRadio>
-			<GuestCountRadio
-				value={4}
-				onClick={() => {
-					setGuestCount(4);
-				}}
-			></GuestCountRadio>
-			<GuestCountRadio
-				value={5}
-				onClick={() => {
-					setGuestCount(5);
-				}}
-			></GuestCountRadio>
-			<GuestCountRadio
-				value={6}
-				onClick={() => {
-					setGuestCount(6);
-				}}
-			></GuestCountRadio>
+			{' '}
+			//TODO: Needs styling
+			<GuestCountRadio value={1} selected checked={handleChecked(1)} />
+			1
+			<GuestCountRadio value={2} checked={handleChecked(2)} />
+			2
+			<GuestCountRadio value={3} checked={handleChecked(3)} />
+			3
+			<GuestCountRadio value={4} checked={handleChecked(4)} />
+			4
+			<GuestCountRadio value={5} checked={handleChecked(5)} />
+			5
+			<GuestCountRadio value={6} checked={handleChecked(6)} />6
 		</GuestCountWrapper>
 	);
 };
