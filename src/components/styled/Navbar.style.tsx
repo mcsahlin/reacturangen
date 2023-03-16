@@ -7,13 +7,13 @@ interface Props {
 
 export const NavbarContainer = styled.nav<Props>`
 	width: 100%;
-	height: ${(props: Props) => (props.extendBurger ? '100vh' : '80px')};
-	background-color: black;
+	height: ${(props: Props) => (props.extendBurger ? '50vh' : '80px')};
+	background: #131313;
 	display: flex;
 	flex-direction: column;
 
 	@media (min-width: 700px) {
-		height: 80px;
+		height: 70px;
 	}
 `;
 
@@ -43,7 +43,7 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarLinks = styled(Link)`
 	color: white;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	text-decoration: none;
 	margin: 10px;
 
@@ -54,7 +54,7 @@ export const NavbarLinks = styled(Link)`
 
 export const NavbarLinksExtended = styled(Link)`
 	color: white;
-	font-size: x-large;
+	font-size: 1rem;
 	text-decoration: none;
 	margin: 10px;
 `;
