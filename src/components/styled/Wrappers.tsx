@@ -76,3 +76,31 @@ export const ImageSecondWrapper = styled.img`
 	width: 100%;
 	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 `;
+
+export const DualInputWrapper = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+`;
+
+export const FormWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid gray;
+`;
+
+export const PageWrapper = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100vw;
+	@media (min-width: 768px) {
+		max-width: 1200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+`;
