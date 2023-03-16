@@ -28,6 +28,7 @@ export const Navbar = () => {
 							<NavbarLinks to='/'>Hem</NavbarLinks>
 							<NavbarLinks to='/booking'>Boka bord</NavbarLinks>
 							<NavbarLinks to='/contact'>Kontakt oss</NavbarLinks>
+							<NavbarLinks to='/admin'>Admin</NavbarLinks>
 						</NavbarLinkContainer>
 					</LeftContainer>
 					<RightContainer>
@@ -50,6 +51,9 @@ export const Navbar = () => {
 						</NavbarLinksExtended>
 						<NavbarLinksExtended onClick={handleClick} to='/contact'>
 							Kontakt oss
+						</NavbarLinksExtended>
+						<NavbarLinksExtended onClick={handleClick} to='/admin'>
+							Admin
 						</NavbarLinksExtended>
 					</NavbarExtendedContainer>
 				)}
