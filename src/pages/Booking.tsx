@@ -6,6 +6,7 @@ import {
 import { BookingCalendar } from '../components/BookingCalendar';
 import { GuestCountSelector } from '../components/GuestCountSelector';
 export const Booking = () => {
+	const [admin, setAdmin] = useState(false);
 	const [guestCount, setGuestCount] = useState<number>(NaN);
 
 	return (

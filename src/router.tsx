@@ -7,7 +7,6 @@ import { Booking } from './pages/Booking';
 import { Admin } from './pages/Admin';
 import { BookingContext } from './contexts/BookingContext';
 import { INewBooking } from './models/INewBooking';
-import { AdminContext } from './contexts/AdminContext';
 
 export const router = createBrowserRouter([
 	{
