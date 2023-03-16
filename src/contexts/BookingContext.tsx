@@ -16,7 +16,7 @@ interface INewBookingContext {
 }
 // export const NewBookingProvider = createContext<INewBookingContext>({});
 
-interface IBookingContextType {
+export interface IBookingContextType {
 	date: string;
 	//TODO# Stoppa i datum från fält
 	//* Skapa fält
@@ -32,7 +32,7 @@ interface IBookingContextType {
 	setCustomer: (customer: ICustomer | undefined) => void;
 } //* Innan denna kan användas måste customer registreras
 
-const defaultContextValue: IBookingContextType = {
+export const defaultContextValue: IBookingContextType = {
 	date: '',
 	time: '',
 	numberOfGuests: NaN,

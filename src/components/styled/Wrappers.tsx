@@ -104,3 +104,9 @@ export const PageWrapper = styled.div`
 		align-items: center;
 	}
 `;
+
+export const GuestCountWrapper = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+`;
