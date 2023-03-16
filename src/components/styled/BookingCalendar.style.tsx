@@ -6,6 +6,25 @@ flex-direction: column;
 align-items: center;
 `;
 
+export const SeclectGuests = styled.select`
+margin-bottom: 30px;
+width: 20%;
+text-align: center;
+background-color: #CED3DC;
+color: black;
+border-radius: 3px;
+padding: 5px;
+
+&:hover{
+    background-color: #2C2F33;
+    color: white;
+}
+`;
+
+export const Options = styled.option`
+margin: 5px;
+`;
+
 export const BorderContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -54,4 +73,31 @@ transition: .5s all;
 
 export const TableBody = styled.tbody`
 margin-top: 20px;
+`;
+
+export const ButtonBooking = styled.button`
+padding: 15px;
+margin-left: 40%;
+margin-top: 30px;
+border-radius: 3px;
+border: 1px solid #E70D52;
+color: #E70D52;
+letter-spacing: 0px;
+transition: all 0.4s;
+cursor: pointer;
+
+&:hover {
+    color: white;
+    background-color: #E70D52;
+}
+
+&:active {
+letter-spacing: 2px;
+}
+
+
+
+@media (min-width: 700px) {
+		width: 20%;
+	}
 `;

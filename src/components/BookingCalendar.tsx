@@ -2,12 +2,15 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import {
 	CalendarContainer,
+	SeclectGuests,
+	Options,
 	BannerContainer,
 	BorderContainer,
 	DaysContainer,
 	DaysBorderBoxes,
 	DateBorderBox,
 	TableBody,
+	ButtonBooking,
 } from './styled/BookingCalendar.style';
 
 export const BookingCalendar = () => {
@@ -61,7 +64,19 @@ export const BookingCalendar = () => {
 	}, []);
 
 	return (
+		<>
 		<CalendarContainer>
+			<h4>Välj antal personer:</h4>
+			<SeclectGuests name='guests' id='guests'>
+				<Options value='1'>1</Options>
+				<Options value='2'>2</Options>
+				<Options value='3'>3</Options>
+				<Options value='4'>4</Options>
+				<Options value='5'>5</Options>
+				<Options value='6'>6</Options>
+				<Options value='7'>7</Options>
+				<Options value='8+'>8+</Options>
+			</SeclectGuests>
 			<BorderContainer>
 				<BannerContainer>
 					<h3>
@@ -133,5 +148,7 @@ export const BookingCalendar = () => {
 				</DaysContainer>
 			</BorderContainer>
 		</CalendarContainer>
+		<ButtonBooking className='btnB'>Boka nu</ButtonBooking>
+	</>
 	);
 };
