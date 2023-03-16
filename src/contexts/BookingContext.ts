@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { ICustomer } from '../models/IPostCustomer';
+import { ICustomer } from '../models/ICustomer';
 import { useState } from 'react';
 
 export interface INewBookingContext {

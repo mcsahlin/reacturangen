@@ -1,5 +1,5 @@
-import { ICustomer } from './IPostCustomer';
-export interface INewBooking {
+import { ICustomer } from './ICustomer';
+export interface IBooking {
 	restaurantId: string;
 	date: string;
 	time: string;
