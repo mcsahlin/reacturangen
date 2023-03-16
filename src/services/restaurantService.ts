@@ -1,29 +1,30 @@
 import axios, { AxiosResponse } from 'axios';
+import { IBooking } from '../models/IBooking';
 import { IRestaurant } from '../models/IRestaurant';
 
 //**** KEYS ****//
-const BASE_URL: string = 'https://school-restaurant-api.azurewebsites.net';
+const BASE_URL: string = 'https://school-restaurant-api.azurewebsites.net/';
 export const bizKey: string = '64121c14072ea76784085cba';
 let bookingId: string = ''; //! Placeholder - value should be assigned by function
 let customerId: string = ''; //! Placeholder - value should be assigned by function
 
 //**** GET ****//
-export const GET_RESTAURANT_URL: string = `${BASE_URL}/restaurant/${bizKey}`;
-const GET_BOOKINGS_URL: string = `${BASE_URL}/booking/restaurant/${bizKey}`;
-const GET_BOOKING_URL: string = `${BASE_URL}/booking/${bookingId}`; //! Not static! (bookingId)
-const GET_CUSTOMER_URL: string = `${BASE_URL}/booking/${customerId}`; //! Not static! (customerId)
+export const GET_RESTAURANT_URL: string = `${BASE_URL}restaurant/${bizKey}`;
+const GET_BOOKINGS_URL: string = `${BASE_URL}booking/restaurant/${bizKey}`;
+const GET_BOOKING_URL: string = `${BASE_URL}booking/${bookingId}`; //! Not static! (bookingId)
+const GET_CUSTOMER_URL: string = `${BASE_URL}booking/${customerId}`; //! Not static! (customerId)
 
 //**** POST ****//
-export const CREATE_RESTAURANT_URL: string = `${BASE_URL}/restaurant/create`;
-const createCustomer: string = `${BASE_URL}/customer/create`;
-const createBooking: string = `${BASE_URL}/booking/create`;
+export const CREATE_RESTAURANT_URL: string = `${BASE_URL}restaurant/create`;
+const createCustomer: string = `${BASE_URL}customer/create`;
+const createBooking: string = `${BASE_URL}booking/create`;
 
 //**** PUT ****//**** ADMIN ****//
-const updateBooking: string = `${BASE_URL}/booking/update${bookingId}`; //! Not static! (bookingId)
-const updateCustomer: string = `${BASE_URL}/customer/update${customerId}`; //! Not static! (customerId)
+const updateBooking: string = `${BASE_URL}booking/update${bookingId}`; //! Not static! (bookingId)
+const updateCustomer: string = `${BASE_URL}customer/update${customerId}`; //! Not static! (customerId)
 
 //**** DELETE ****//**** ADMIN ****//
-const deleteBooking: string = `${BASE_URL}/booking/delete${bookingId}`; //! Not static! (bookingId)
+const deleteBooking: string = `${BASE_URL}booking/delete${bookingId}`; //! Not static! (bookingId)
 
 //---------------------------------------------------------------------------//
 
@@ -35,14 +36,6 @@ const apiCall = async <T>(url: string) => {
 
 //TODO# Test
 //#region getBooking
-interface IBooking {
-	id: string;
-	restaurantId: string;
-	date: string;
-	time: string;
-	numberOfGuests: number;
-	customerId: string;
-}
 export const getBooking = async (): Promise<IBooking> => {
 	const response: IBooking | any = await apiCall<IBooking>(GET_BOOKING_URL).then(
 		(res) => {
@@ -62,9 +55,7 @@ export const getBooking = async (): Promise<IBooking> => {
 //#endregion getBooking
 
 //#region getBookings
-interface IBookings {
-	bookings: IBooking[];
-}
+
 export const getBookings = async (): Promise<AxiosResponse<IBooking[]>> => {
 	const response: IBooking[] | any = await apiCall<IBooking[]>(
 		GET_BOOKINGS_URL

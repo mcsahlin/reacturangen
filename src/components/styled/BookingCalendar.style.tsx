@@ -7,7 +7,7 @@ import styled from 'styled-components';
 		props.selected ? SELECTED_BG_CLR : SELECTED_TXT_CLR};
 	color: ${(props: IDateBorderBox) =>
 		props.selected ? SELECTED_TXT_CLR : TXT_CLR}; */
-const SELECTED_BG_CLR = '#E70D52';
+export const SELECTED_BG_CLR = '#E70D52';
 const SELECTED_TXT_CLR = '#CED3DC';
 const TXT_CLR = '#131301';
 
@@ -18,23 +18,34 @@ export const CalendarContainer = styled.div`
 	margin-bottom: 100px;
 `;
 
-export const SeclectGuests = styled.select`
-margin-bottom: 30px;
-width: 20%;
-text-align: center;
-background-color: #CED3DC;
-color: black;
-border-radius: 3px;
-padding: 5px;
+export const SeclectGuests = styled.input.attrs({
+	type: 'number',
+	defaultValue: 0,
+})`
+	cursor: pointer;
+	border: none;
+	border-bottom: 3px solid #131301;
 
-&:hover{
-    background-color: #2C2F33;
-    color: white;
-}
-`;
-
-export const Options = styled.option`
-margin: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	width: 20%;
+	text-align: center;
+	background-color: #ced3dc;
+	color: black;
+	border-radius: 3px;
+	padding: 5px;
+	moz- ::-webkit-inner-spin-button,
+	::-webkit-inner-spin-button,
+	::-webkit-outer-spin-button,
+	::-webkit-outer-spin-button {
+		display: none;
+		visibility: hidden;
+	}
+	&:hover {
+		background-color: #2c2f33;
+		color: white;
+	}
 `;
 
 export const BorderContainer = styled.div`
@@ -81,5 +92,5 @@ export const DateBorderBox = styled.td`
 `;
 
 export const TableBody = styled.tbody`
-margin-top: 20px;
+	margin-top: 20px;
 `;

@@ -5,6 +5,8 @@ import {
 } from './../components/styled/BookingPage.style';
 import { BookingCalendar } from '../components/BookingCalendar';
 import { GuestCountSelector } from '../components/GuestCountSelector';
+import { BookingContext, BookingProvider } from '../contexts/BookingContext';
+
 import { CustomerRegistrationForm } from '../components/CustomerRegistrationForm';
 export const Booking = () => {
 	const [admin, setAdmin] = useState(false);
@@ -12,12 +14,14 @@ export const Booking = () => {
 
 	return (
 		<>
-			<BookingContainer>
-				<BookingHeading>Booking</BookingHeading>
-				<GuestCountSelector />
-				<BookingCalendar />
-				<CustomerRegistrationForm children={undefined} />
-			</BookingContainer>
+			<BookingProvider>
+				<BookingContainer>
+					<BookingHeading>Booking</BookingHeading>
+					{/* <GuestCountSelector /> */}
+					<BookingCalendar />
+					<CustomerRegistrationForm children={undefined} />
+				</BookingContainer>
+			</BookingProvider>
 		</>
 	);
 };

@@ -1,5 +1,4 @@
 import React, { createContext, useState } from 'react';
-
 export interface IAdminContext {
 	value: boolean;
 	setValue: (value: boolean) => void;
@@ -9,7 +8,6 @@ export const AdminContext = createContext<IAdminContext>({
 	value: false,
 	setValue: () => {},
 });
-
 export const AdminProvider: React.FC<{ children: React.ReactNode }> = ({
 	children,
 }) => {
