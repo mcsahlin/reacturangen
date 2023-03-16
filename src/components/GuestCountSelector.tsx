@@ -3,7 +3,7 @@ import { GuestCountWrapper } from './styled/Wrappers';
 import { useState, useContext, useEffect } from 'react';
 import { BookingContext } from '../contexts/BookingContext';
 
-export const GuestCountSelector = () => {
+export const GuestCountSelector_parked = () => {
 	const [loading, setLoading] = useState<boolean>(true);
 	const [guestCount, setGuestCount] = useState<number>();
 	const bookingContext = useContext(BookingContext);

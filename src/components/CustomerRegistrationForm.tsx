@@ -6,13 +6,39 @@ import { FormWrapper, DualInputWrapper } from './styled/Wrappers';
 import { Button } from './styled/Buttons';
 import { BookingContext } from '../contexts/BookingContext';
 import { CustomerContext } from '../contexts/CustomerContext';
-
-export const CustomerRegistrationForm = () => {
+interface IFormState {
+	firstname: string;
+	lastname: string;
+	email: string;
+	phone: string;
+}
+interface IFormProps {
+	children: React.ReactNode;
+}
+export const CustomerRegistrationForm = (props: IFormProps) => {
 	const [loading, setLoading] = useState<boolean>(true);
-	const [firstname, setFirstname] = useState<string>();
-	const [lastname, setLastname] = useState<string>();
-	const [email, setEmail] = useState<string>();
-	const [phone, setPhone] = useState<string>();
+	const [form, setForm] = useState<IFormState>({
+		firstname: '',
+		lastname: '',
+		email: '',
+		phone: '',
+	});
+	const handleFormChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		// Get the name of the field that caused this change event
+		// Get the new value of this field
+		const { name, value } = event.target;
+
+		// Assign new value to the appropriate form field
+		const updatedForm: IFormState = {
+			...form,
+			[name]: value,
+		};
+
+		console.log('Form changed: ', updatedForm);
+
+		// Update state
+		setForm(updatedForm);
+	};
 
 	const bookingContext = useContext(CustomerContext);
 
