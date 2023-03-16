@@ -59,14 +59,14 @@ export const InfoWrapper = styled(Wrapper)`
 `;
 
 export const TextWrapper = styled.p`
-	height: 40vh;
-	width: 30vh;
+	height: 600px;
+	width: 300px;
 	padding: 40px;
 	border: 1px solid black;
 	border-radius: 20px;
 
 	@media (min-width: 700px) {
-		height: 50vh;
+		height: 550px;
 	}
 `;
 
@@ -85,7 +85,8 @@ export const ImageBackgroundWrapper = styled(Wrapper)`
 	background-size: cover;
 	height: 40vh;
 	width: 100%;
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 100%, 80% 100%, 49% 77%, 19% 100%, 0 100%);
+
 
 	@media (min-width: 700px) {
 		height: 90vh;
