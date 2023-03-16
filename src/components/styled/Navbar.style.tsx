@@ -7,7 +7,7 @@ interface Props {
 
 export const NavbarContainer = styled.nav<Props>`
 	width: 100%;
-	height: ${(props: Props) => (props.extendBurger ? '50vh' : '80px')};
+	height: ${(props: Props) => (props.extendBurger ? '100vh' : '80px')};
 	background: #131313;
 	display: flex;
 	flex-direction: column;
