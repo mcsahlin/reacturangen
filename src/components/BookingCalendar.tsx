@@ -97,8 +97,6 @@ export const BookingCalendar = () => {
 				<Options value='4'>4</Options>
 				<Options value='5'>5</Options>
 				<Options value='6'>6</Options>
-				<Options value='7'>7</Options>
-				<Options value='8+'>8+</Options>
 			</SeclectGuests>
 			<BorderContainer>
 				<BannerContainer>
