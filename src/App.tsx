@@ -7,7 +7,7 @@ import {
 	AdminProvider,
 	IAdminContext,
 } from './contexts/AdminContext';
-import { login } from './utils/login';
+import { login, logout } from './utils/login';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -33,12 +33,12 @@ function App() {
 				<Outlet></Outlet>
 			</main>
 			<footer>
-				<Footer/>
+				<Footer />
 				{admin ? (
 					<button
 						type='button'
 						onClick={async () => {
-							const admin = await login();
+							const admin = await logout();
 							setAdmin(false);
 						}}
 					>
