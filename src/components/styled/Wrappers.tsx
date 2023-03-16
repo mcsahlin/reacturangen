@@ -50,6 +50,7 @@ export const VideoWrapper = styled.video`
 export const InfoWrapper = styled(Wrapper)`
 	flex-direction: column;
 	align-items: center;
+	height: 110vh;
 
 	@media (min-width: 700px) {
 		flex-direction: row;
@@ -59,7 +60,7 @@ export const InfoWrapper = styled(Wrapper)`
 `;
 
 export const TextWrapper = styled.p`
-	height: 600px;
+	height: 520px;
 	width: 300px;
 	padding: 40px;
 	border: 1px solid black;
