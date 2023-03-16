@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from 'react';
 import { HomeVideoBackground } from '../components/HomeVideoBackground';
 import { HomeInfo } from '../components/HomeInfo';
 import { HomeSecondBackground } from '../components/HomeSecondBackground';
+import { Footer } from '../components/Footer';
 import { AdminContext } from '../contexts/AdminContext';
 
 export const Home = () => {
@@ -19,9 +20,10 @@ export const Home = () => {
 	return (
 		// TEST CODE
 		<>
-			<HomeVideoBackground />
-			<HomeInfo />
-			<HomeSecondBackground />
+			<HomeVideoBackground/>
+			<HomeInfo/>
+			<HomeSecondBackground/>
+			<Footer/>
 		</>
 	);
 };
