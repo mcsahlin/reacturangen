@@ -7,7 +7,7 @@ export const HomeSecondBackground = () => {
 		<>
 			<ImageBackgroundWrapper>
 				<FontWrapper>
-					<H2>Reactaurangen</H2>
+					<H2>REACTAURANGEN</H2>
 				</FontWrapper>
 			</ImageBackgroundWrapper>
 		</>

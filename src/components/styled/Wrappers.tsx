@@ -134,6 +134,7 @@ export const FontWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	color: whitesmoke;
+	letter-spacing: 0.5rem;
 
 	@media (min-width: 700px) {
 		align-items: center;
@@ -141,3 +142,86 @@ export const FontWrapper = styled.div`
 		font-size: x-large;
 	}
 `;
+
+export const FooterWrapper = styled.div`
+	background-color:#2C2F33;
+	height: 90vh;
+	width: 100%;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	border-top: 6px solid white;
+
+	@media (min-width: 700px) {
+		height: 60vh;
+		align-items: center;
+		justify-content: space-around;
+	}
+`
+export const IconWrapper = styled.div`
+	width: 90%;
+	height: 35%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	color: whitesmoke;
+	cursor: pointer;
+	font-size: 10rem;
+
+	@media (min-width: 700px) {
+		font-size: 3rem;
+		width: 100%;
+		height: auto;
+		flex-flow: row;
+	}
+`
+export const Icon = styled.a`
+	color: whitesmoke;
+	cursor: pointer;
+	font-size: 3rem;
+`
+
+export const FooterDetailWrapper = styled.div`
+	height: 18vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+
+	@media (min-width: 700px) {
+		flex-direction: row;
+		width: 100%;
+		height: auto;
+	}
+`
+
+export const FooterTextWrapper = styled.span`
+	color: whitesmoke;
+	display: flex;
+	bottom: 10px;
+`
+
+export const FooterHourWrapper = styled.div`
+	width: 100%;
+	height: 30vh;
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	align-items: center	;
+	justify-content: space-around;
+`
+export const OpeningWrapper = styled.div`
+	width: 90%;
+	display: flex;
+	letter-spacing: 0.5rem;
+	justify-content: space-between;
+
+	@media (min-width: 700px) {
+		width: 40%;
+	}
+`
+
