@@ -15,7 +15,7 @@ import {
 interface ICalendarProps {
 	selected: boolean;
 }
-export const BookingCalendar = (props: ICalendarProps) => {
+export const BookingCalendar = () => {
 	const [loading, setLoading] = useState<boolean>(true);
 	const [now, setNow] = useState(new Date(Date.now()));
 	const [year, setYear] = useState<number>(new Date().getFullYear());
@@ -84,10 +84,10 @@ export const BookingCalendar = (props: ICalendarProps) => {
 		}
 	};
 
-	let daysThisMonth = now.getMonth;
-	for (let i = 0; i < array.length; i++) {
-		const element = array[i];
-	}
+	// let daysThisMonth = now.getMonth;
+	// for (let i = 0; i < array.length; i++) {
+	// 	const element = array[i];
+	// }
 
 	console.log(now.getDate());
 	useEffect(() => {
