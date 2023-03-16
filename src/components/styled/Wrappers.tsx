@@ -93,21 +93,6 @@ export const ImageBackgroundWrapper = styled(Wrapper)`
 	}
 `;
 
-export const DualInputWrapper = styled.div`
-	width: 100%;
-	display: flex;
-	justify-content: space-evenly;
-`;
-
-export const FormWrapper = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 10px;
-	border: 1px solid gray;
-`;
-
 export const PageWrapper = styled.div`
 	display: flex;
 	flex-direction: row;

@@ -6,10 +6,11 @@ export const H1 = styled.h1`
     color: whitesmoke;
     backface-visibility: hidden;
     letter-spacing: .5rem;
-
+    
     animation: moveInLeft;
     animation-duration: 1s;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
+
 
     @keyframes moveInLeft {
         0% {

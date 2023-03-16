@@ -85,8 +85,7 @@ margin-top: 20px;
 
 export const ButtonBooking = styled.button`
 padding: 15px;
-margin: 40%;
-margin-top: 30px;
+margin: 5% 40% 5% 40%;
 border-radius: 3px;
 border: 1px solid #E70D52;
 color: #E70D52;

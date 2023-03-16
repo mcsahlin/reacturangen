@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useContext } from 'react';
 import { UserInput } from './styled/Inputs';
 import { Form } from './styled/Forms';
-import { FormWrapper, DualInputWrapper } from './styled/Wrappers';
+import { FormWrapper, DualInputWrapper } from './styled/Forms';
 import { Button } from './styled/Buttons';
 import { BookingContext } from '../contexts/BookingContext';
 import { CustomerContext } from '../contexts/CustomerContext';
