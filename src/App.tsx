@@ -7,7 +7,7 @@ import {
 	AdminProvider,
 	IAdminContext,
 } from './contexts/AdminContext';
-import { login } from './utils/login';
+import { login, logout } from './utils/login';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -36,7 +36,7 @@ function App() {
 					<button
 						type='button'
 						onClick={async () => {
-							const admin = await login();
+							const admin = await logout();
 							setAdmin(false);
 						}}
 					>

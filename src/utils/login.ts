@@ -4,3 +4,10 @@ export const login = async () => {
 		password: 'admin',
 	};
 };
+
+export const logout = async () => {
+	return {
+		username: '',
+		password: '',
+	};
+};
