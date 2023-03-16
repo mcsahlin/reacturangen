@@ -80,7 +80,6 @@ export const DateBorderBox = styled.td`
 `;
 
 export const TableBody = styled.tbody`
-<<<<<<< HEAD
 margin-top: 20px;
 `;
 
@@ -110,7 +109,3 @@ letter-spacing: 2px;
 		width: 20%;
 	}
 `;
-=======
-	margin-top: 20px;
-`;
->>>>>>> a1ec9b74f8af3efbb0dd42b2776523a112626f98
