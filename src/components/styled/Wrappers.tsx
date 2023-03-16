@@ -85,7 +85,8 @@ export const ImageBackgroundWrapper = styled(Wrapper)`
 	background-size: cover;
 	height: 40vh;
 	width: 100%;
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 100%, 80% 100%, 49% 77%, 19% 100%, 0 100%);
+
 
 	@media (min-width: 700px) {
 		height: 90vh;
