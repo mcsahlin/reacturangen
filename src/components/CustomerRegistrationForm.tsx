@@ -2,10 +2,10 @@ import React from 'react';
 import { useState, useContext } from 'react';
 import { UserInput } from './styled/Inputs';
 import { Form } from './styled/Forms';
-import { FormWrapper, DualInputWrapper } from './styled/Wrappers';
-import { Button } from './styled/Buttons';
+import { FormWrapper, DualInputWrapper, LabelDiv, StyledLabel, DualInputWrapperSecond  } from './styled/Forms';
 import { BookingContext } from '../contexts/BookingContext';
 import { CustomerContext } from '../contexts/CustomerContext';
+import { ButtonBooking } from './styled/Buttons';
 interface IFormState {
 	firstname: string;
 	lastname: string;
@@ -47,16 +47,29 @@ export const CustomerRegistrationForm = (props: IFormProps) => {
 		<FormWrapper>
 			{/* <CustomerContext.Provider> */}
 			<Form>
-				<DualInputWrapper>
-					<UserInput placerholder='Förnamn' onChange={(e: Event) => {}}></UserInput>
 
-					<UserInput placerholder='Efternamn'></UserInput>
-				</DualInputWrapper>
 				<DualInputWrapper>
-					<UserInput placerholder='Epost'></UserInput>
-					<UserInput placerholder='Telefon'></UserInput>
+					<LabelDiv>
+					<StyledLabel>Förnamn:</StyledLabel>
+					</LabelDiv>
+					<UserInput type="text" placerholder='Förnamn' onChange={(e: Event) => {}} name="Förnamn" id="Förnamn" requierd />
+					<LabelDiv>
+					<StyledLabel>Efternamn:</StyledLabel>
+					</LabelDiv>
+					<UserInput type="text" placerholder='Efternamn' onChange={(e: Event) => {}} name="Efternamn" id="Efternamn" requierd />
 				</DualInputWrapper>
-				<Button>Bekräfta bokning</Button>
+
+				<DualInputWrapperSecond>
+					<LabelDiv>
+					<StyledLabel>Email:</StyledLabel>
+					</LabelDiv>
+					<UserInput type="text" placerholder='Email' onChange={(e: Event) => {}} name="Email" id="Email" requierd />
+					<LabelDiv>
+					<StyledLabel>Telefon:</StyledLabel>
+					</LabelDiv>
+					<UserInput type="text" placerholder='Telefon' onChange={(e: Event) => {}} name="Telefon" id="Telefon" requierd />
+				</DualInputWrapperSecond>
+				<ButtonBooking className='btnB'>Slutför</ButtonBooking>
 			</Form>
 			{/* </CustomerContext.Provider> */}
 		</FormWrapper>

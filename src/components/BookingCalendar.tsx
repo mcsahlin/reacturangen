@@ -10,7 +10,6 @@ import {
 	DaysBorderBoxes,
 	DateBorderBox,
 	TableBody,
-	ButtonBooking,
 } from './styled/BookingCalendar.style';
 interface ICalendarProps {
 	selected: boolean;
