@@ -8,6 +8,7 @@ import {
 	IAdminContext,
 } from './contexts/AdminContext';
 import { login } from './utils/login';
+import { Footer } from './components/Footer';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -32,6 +33,7 @@ function App() {
 				<Outlet></Outlet>
 			</main>
 			<footer>
+				<Footer></Footer>
 				{admin ? (
 					<button
 						type='button'
