@@ -1,18 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import './App.css';
 import { Outlet } from 'react-router-dom';
-import {
-	dbCheck,
-	getRestaurant,
-	GET_RESTAURANT_URL,
-	initBiz,
-} from './services/restaurantService';
 import { Navbar } from './components/Navbar';
-import { RestaurantContext } from './contexts/RestaurantContext';
-import axios from 'axios';
-import { IRestaurant } from './models/IRestaurant';
+import { AdminContext } from './contexts/AdminContext';
+
 function App() {
 	const [loading, setLoading] = useState(true);
+	const [admin, setAdmin] = useState<boolean>(false);
+	const adminProviderValue = useMemo(
+		() => ({ admin, setAdmin }),
+		[admin, setAdmin]
+	);
 
 	useEffect(() => {
 		if (!loading) return;
@@ -22,6 +20,7 @@ function App() {
 
 	return (
 		<>
+			{/* <AdminContext> */}
 			<header>
 				<Navbar />
 			</header>
@@ -29,6 +28,7 @@ function App() {
 				<Outlet></Outlet>
 			</main>
 			<footer></footer>
+			{/* </AdminContext> */}
 		</>
 	);
 }
