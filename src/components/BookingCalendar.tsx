@@ -10,7 +10,6 @@ import {
 	DaysBorderBoxes,
 	DateBorderBox,
 	TableBody,
-	ButtonBooking,
 } from './styled/BookingCalendar.style';
 interface ICalendarProps {
 	selected: boolean;
@@ -169,7 +168,6 @@ export const BookingCalendar = () => {
 				</DaysContainer>
 			</BorderContainer>
 		</CalendarContainer>
-		<ButtonBooking className='btnB'>Boka nu</ButtonBooking>
 	</>
 	);
 };

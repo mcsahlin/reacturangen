@@ -5,21 +5,51 @@ export const FormWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	padding: 10px;
-	border: 1px solid gray;
+	background-image: linear-gradient(
+      to right bottom,
+	  #2c2f33,
+      #131313
+    );
 `;
 
 export const Form = styled.form`
-	width: 100%;
+	width: 50%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	flex-wrap: wrap;
+	margin: 100px;
+
+`;
+
+export const LabelDiv = styled.div`
+width: 100px;
 `;
 
 export const DualInputWrapper = styled.div`
 	width: 100%;
 	display: flex;
-	border: 1px solid gray;
-	justify-content: space-evenly;
+	justify-content: center;
+`;
+
+export const DualInputWrapperSecond = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+`;
+
+export const StyledLabel = styled.label`
+max-width: 100%;
+font-size: 1rem;
+font-weight: 700;
+display: flex;
+justify-content: center;
+margin: 10px 10px 10px 5px;
+color: whitesmoke;
+transition: all 0.3s;
+
+&:placeholder {
+      color: $color-gray;
+    }
 `;
 
