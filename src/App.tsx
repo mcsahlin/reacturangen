@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from 'react';
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { AdminContext } from './contexts/AdminContext';
+import { AdminContext, AdminProvider } from './contexts/AdminContext';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -19,8 +19,7 @@ function App() {
 	}, []);
 
 	return (
-		<>
-			{/* <AdminContext> */}
+		<AdminProvider>
 			<header>
 				<Navbar />
 			</header>
@@ -28,8 +27,7 @@ function App() {
 				<Outlet></Outlet>
 			</main>
 			<footer></footer>
-			{/* </AdminContext> */}
-		</>
+		</AdminProvider>
 	);
 }
 
