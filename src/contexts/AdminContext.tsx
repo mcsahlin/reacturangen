@@ -4,7 +4,7 @@ export interface IAdminContext {
 	value: boolean;
 	setValue: (value: boolean) => void;
 }
-
+export const adminTheme = {};
 export const AdminContext = createContext<IAdminContext>({
 	value: false,
 	setValue: () => {},
