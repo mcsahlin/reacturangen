@@ -23,7 +23,6 @@ export const Home = () => {
 			<HomeVideoBackground/>
 			<HomeInfo/>
 			<HomeSecondBackground/>
-			<Footer/>
 		</>
 	);
 };

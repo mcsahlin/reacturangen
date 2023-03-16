@@ -33,7 +33,7 @@ function App() {
 				<Outlet></Outlet>
 			</main>
 			<footer>
-				<Footer></Footer>
+				<Footer/>
 				{admin ? (
 					<button
 						type='button'
