@@ -5,7 +5,7 @@ import {
 import { BookingContext } from '../contexts/BookingContext';
 import { BookingCalendar } from '../components/BookingCalendar';
 import { useState, useContext } from 'react';
-import { ICustomer } from '../models/ICustomer';
+import { ICustomer } from '../models/IPostCustomer';
 
 export const Booking = () => {
 	const [guestCount, setGuestCount] = useState<number>(NaN);

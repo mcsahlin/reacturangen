@@ -18,21 +18,20 @@ export const CustomerRegistrationForm = () => {
 
 	return (
 		<FormWrapper>
-				<CustomerContext.Provider>
-				<Form>
-					<DualInputWrapper>
-						<UserInput placerholder='Förnamn'></UserInput>
-						
-						<UserInput placerholder='Efternamn'></UserInput>
-					</DualInputWrapper>
-					<DualInputWrapper>
-						<UserInput placerholder='Epost'></UserInput>
-						<UserInput placerholder='Telefon'></UserInput>
-					</DualInputWrapper>
-					<Button>Bekräfta bokning</Button>
-				</Form>
-						</CustomerContext.Provider>
-			</FormWrapper>
-		</BookingContext.Provider>
+			{/* <CustomerContext.Provider> */}
+			<Form>
+				<DualInputWrapper>
+					<UserInput placerholder='Förnamn'></UserInput>
+
+					<UserInput placerholder='Efternamn'></UserInput>
+				</DualInputWrapper>
+				<DualInputWrapper>
+					<UserInput placerholder='Epost'></UserInput>
+					<UserInput placerholder='Telefon'></UserInput>
+				</DualInputWrapper>
+				<Button>Bekräfta bokning</Button>
+			</Form>
+			{/* </CustomerContext.Provider> */}
+		</FormWrapper>
 	);
 };

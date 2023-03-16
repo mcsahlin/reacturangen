@@ -1,4 +1,4 @@
-import { ICustomer } from '../models/ICustomer';
+import { ICustomer } from '../models/IPostCustomer';
 import { createContext } from 'react';
 
 interface ICustomerContext extends ICustomer {}
