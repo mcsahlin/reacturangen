@@ -26,4 +26,8 @@ export const InfoBox = styled.div`
 	height: 95vh;
 	padding: 10px 20px;
 	font-weight: 100;
+
+	@media (max-width: 700px) {
+		font-size: .5rem;
+	}
 `;

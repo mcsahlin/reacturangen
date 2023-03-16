@@ -45,9 +45,9 @@ export const CustomerRegistrationForm = (props: IFormProps) => {
 
 	return (
 		<FormWrapper>
+			
 			{/* <CustomerContext.Provider> */}
 			<Form>
-
 				<DualInputWrapper>
 					<LabelDiv>
 					<StyledLabel>Förnamn:</StyledLabel>

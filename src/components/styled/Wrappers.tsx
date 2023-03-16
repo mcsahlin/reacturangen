@@ -50,6 +50,7 @@ export const VideoWrapper = styled.video`
 export const InfoWrapper = styled(Wrapper)`
 	flex-direction: column;
 	align-items: center;
+	height: 110vh;
 
 	@media (min-width: 700px) {
 		flex-direction: row;
@@ -59,7 +60,7 @@ export const InfoWrapper = styled(Wrapper)`
 `;
 
 export const TextWrapper = styled.p`
-	height: 600px;
+	height: 520px;
 	width: 300px;
 	padding: 40px;
 	border: 1px solid black;
@@ -138,6 +139,7 @@ export const FontWrapper = styled.div`
 `;
 
 export const FooterWrapper = styled.div`
+	border-top: 6px solid white;
 	background-color:#2C2F33;
 	height: 90vh;
 	width: 100%;
@@ -146,7 +148,6 @@ export const FooterWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	border-top: 6px solid white;
 
 	@media (min-width: 700px) {
 		height: 60vh;
