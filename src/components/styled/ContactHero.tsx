@@ -4,7 +4,7 @@ import contactHeroImg from '../../assets/img/meat-1.jpg';
 export const HeroSection = styled.section`
 	background-image: url(${contactHeroImg});
 	background-size: cover;
-	height: 500px;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: right;
