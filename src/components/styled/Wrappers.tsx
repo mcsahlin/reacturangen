@@ -86,16 +86,8 @@ export const ImageBackgroundWrapper = styled(Wrapper)`
 	background-size: cover;
 	height: 40vh;
 	width: 100%;
-	clip-path: polygon(
-		0 0,
-		100% 0,
-		100% 20%,
-		100% 100%,
-		80% 100%,
-		49% 77%,
-		19% 100%,
-		0 100%
-	);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
 	@media (min-width: 700px) {
 		height: 90vh;
@@ -139,7 +131,6 @@ export const FontWrapper = styled.div`
 `;
 
 export const FooterWrapper = styled.div`
-	border-top: 6px solid white;
 	background-color:#2C2F33;
 	height: 90vh;
 	width: 100%;
@@ -177,7 +168,7 @@ export const IconWrapper = styled.div`
 export const Icon = styled.a`
 	color: whitesmoke;
 	cursor: pointer;
-	font-size: 3rem;
+	font-size: 2rem;
 `
 
 export const FooterDetailWrapper = styled.div`

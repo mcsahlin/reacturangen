@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AdminContainer, AdminTable, AdminThead, AdminTr, ThId, NameTh, LastNameTh, DateTh, TimeTh, GuestsTh, AdimnBody, BodyTr, BodyTd, DeleteIcon } from '../components/styled/Admin.style';
+import { AdminContainer, AdminTable, AdminThead, AdminTr, Th, AdimnBody, BodyTr, BodyTd, DeleteIcon } from '../components/styled/Admin.style';
 import { ICustomer } from '../models/ICustomer';
 import AiFillDelete from 'react-icons';
 
@@ -22,12 +22,12 @@ export const Admin = () => {
 			<AdminTable>
 				<AdminThead>
 					<AdminTr>
-					<ThId>#</ThId>
-					<NameTh>Namn</NameTh>
-					<LastNameTh>Efternamn</LastNameTh>
-					<DateTh>Datum</DateTh>
-					<TimeTh>Tid</TimeTh>
-					<GuestsTh>Antal</GuestsTh>
+					<Th>#</Th>
+					<Th>Namn</Th>
+					<Th>Efternamn</Th>
+					<Th>Datum</Th>
+					<Th>Tid</Th>
+					<Th>Antal</Th>
 					</AdminTr>
 				</AdminThead>
 				<AdimnBody>

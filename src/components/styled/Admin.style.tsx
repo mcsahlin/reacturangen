@@ -28,35 +28,11 @@ export const AdminTr = styled.tr`
 
 `;
 
-export const ThId = styled.th`
+export const Th = styled.th`
 border: 1px solid black;
 padding: 12px;
 `;
 
-export const NameTh = styled.th`
-border: 1px solid black;
-padding: 16px;
-`;
-
-export const LastNameTh = styled.th`
-border: 1px solid black;
-padding: 16px;
-`;
-
-export const DateTh = styled.th`
-border: 1px solid black;
-padding: 16px;
-`;
-
-export const TimeTh = styled.th`
-border: 1px solid black;
-padding: 16px;
-`;
-
-export const GuestsTh = styled.th`
-border: 1px solid black;
-padding: 16px;
-`;
 
 export const AdimnBody = styled.tbody`
 
