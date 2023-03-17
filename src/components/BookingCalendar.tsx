@@ -259,7 +259,6 @@ export const BookingCalendar = () => {
 					</DaysContainer>
 				</BorderContainer>
 			</CalendarContainer>
-			<ButtonBooking className='btnB'>Boka nu</ButtonBooking>
 		</>
 	);
 };
