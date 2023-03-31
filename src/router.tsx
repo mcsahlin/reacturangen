@@ -3,8 +3,8 @@ import App from './App';
 import { Home } from './pages/Home';
 import { NotFound } from './pages/NotFound';
 import { Contact } from './pages/Contact';
-import { Booking } from './pages/Booking';
 import { Admin } from './pages/Admin';
+import { BookingCalendar } from './components/Calendar/BookingCalendar';
 
 export const router = createBrowserRouter([
 	{
@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: '/booking',
-				element: <Booking />,
+				element: <BookingCalendar />,
 			},
 			{
 				path: '/contact',

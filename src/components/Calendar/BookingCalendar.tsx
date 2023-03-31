@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Calendar from 'react-calendar';
 import './BookingCalendar.css';
 import {add, format} from 'date-fns';
-import { INTERVAL, STORE_CLOSING_TIME, STORE_OPENING_TIME } from '../constants/config';
+import { INTERVAL, STORE_CLOSING_TIME, STORE_OPENING_TIME } from './constants/config';
 
 interface BookingCalendarProps {
 }
