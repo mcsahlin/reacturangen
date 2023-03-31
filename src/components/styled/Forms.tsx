@@ -5,11 +5,6 @@ export const FormWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	background-image: linear-gradient(
-      to right bottom,
-	  #2c2f33,
-      #131313
-    );
 `;
 
 
@@ -19,11 +14,13 @@ export const Form = styled.form`
 	justify-content: center;
 	flex-wrap: wrap;
 	margin: 100px;
+	color: #000;
 
 `;
 
-export const LabelDiv = styled.div`
+export const LabelUl = styled.ul`
 width: 100px;
+color: black;
 `;
 
 export const DualInputWrapper = styled.div`
@@ -46,11 +43,10 @@ font-weight: 700;
 display: flex;
 justify-content: center;
 margin: 10px 10px 10px 5px;
-color: whitesmoke;
 transition: all 0.3s;
 
 &:placeholder {
-      color: $color-gray;
+      color: black;
     }
 `;
 
