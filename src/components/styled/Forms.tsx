@@ -15,10 +15,12 @@ export const Form = styled.form`
 	justify-content: center;
 	flex-wrap: wrap;
 	margin: 100px;
+	color: #000;
 `;
 
-export const LabelDiv = styled.div`
+export const LabelUl = styled.ul`
 	width: 100px;
+	color: black;
 `;
 
 export const DualInputWrapper = styled.div`
@@ -40,10 +42,9 @@ export const StyledLabel = styled.label`
 	display: flex;
 	justify-content: center;
 	margin: 10px 10px 10px 5px;
-	color: whitesmoke;
 	transition: all 0.3s;
 
 	&:placeholder {
-		color: $color-gray;
+		color: black;
 	}
 `;
