@@ -21,7 +21,7 @@ export const CREATE_BOOKING_URL: string = `${BASE_URL}booking/create`;
 
 //**** PUT ****//**** ADMIN ****//
 export const PUT_BOOKING_URL: string = `${BASE_URL}booking/update${bookingId}`; //! Not static! (bookingId)
-export const PUIT_CUSTOMER_URL: string = `${BASE_URL}customer/update${customerId}`; //! Not static! (customerId)
+export const PUT_CUSTOMER_URL: string = `${BASE_URL}customer/update${customerId}`; //! Not static! (customerId)
 
 //**** DELETE ****//**** ADMIN ****//
 export const DELETE_BOOKING_URL: string = `${BASE_URL}booking/delete${bookingId}`; //! Not static! (bookingId)
@@ -111,7 +111,7 @@ export const initBiz = () => {
 		.then((res) => {
 			return res.data;
 		})
-		.catch((err) => {
+		.catch((err: Error) => {
 			console.log(err);
 		});
 	res.then((key) => {

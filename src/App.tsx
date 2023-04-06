@@ -34,7 +34,7 @@ function App() {
 			</main>
 			<footer>
 				<Footer />
-				{admin ? (
+				{/* {admin ? (
 					<button
 						type='button'
 						onClick={async () => {
@@ -54,7 +54,7 @@ function App() {
 					>
 						Admin Login
 					</button>
-				)}
+				)} */}
 			</footer>
 		</AdminContext.Provider>
 	);

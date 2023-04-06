@@ -38,7 +38,6 @@ export const BookingCalendar = () => {
 		<option
 			onClick={() => {
 				setDate(format(date, 'yyyy-MM-dd'));
-				console.log(date);
 			}}
 			key={date.getTime()}
 			value={format(date, 'yyyy-MM-dd')}

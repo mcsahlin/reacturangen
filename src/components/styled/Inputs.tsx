@@ -6,7 +6,8 @@ interface IInputProps {
 
 export const UserInput = styled.input.attrs((props: IInputProps) => ({
 	type: 'text',
-	placeholder: (props: IInputProps) => props.placeholder || 'Vänligen fyll i..',
+	placeholder: (props: IInputProps) =>
+		props.placeholder ? props.placeholder : 'Vänligen fyll i..',
 }))`
 	font-size: 1rem;
 	font-family: inherit;
@@ -36,6 +37,7 @@ export const UserInput = styled.input.attrs((props: IInputProps) => ({
 		transform: translateY(-4rem);
 	}
 `;
+
 export const GuestCountInput = styled(UserInput).attrs({ type: 'number' })``;
 
 export const FirstNameInput = styled(UserInput)``;
