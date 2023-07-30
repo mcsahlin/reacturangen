@@ -66,6 +66,7 @@ export const BookingForm = () => {
             },
           }
         );
+        console.log(response.data);
         Swal.fire("Bokning skapad för " + date + " " + time);
       } catch (error) {
         console.log(error);
