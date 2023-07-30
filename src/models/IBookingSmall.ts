@@ -1,6 +1,6 @@
-export interface IBookingSmall{
-    id: string;
-    date: string;
-    time: string;
-    numberOfGuests: number;
+export interface IBookingSmall {
+  _id: string;
+  date: string;
+  time: string;
+  numberOfGuests: number;
 }
