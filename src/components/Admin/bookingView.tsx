@@ -4,6 +4,9 @@ import { ICustomer } from "../../models/ICustomer";
 import { get_bookings, get_customers } from "../../services/restaurantService";
 import { Booking } from "../Admin/bookingModel";
 import { IBooking } from "../../models/IBooking";
+import { BookingContainer, Input, InputDiv, Section, Table, Tbody, FormWrapper, Btn } from "../styled/NewAdminStyle";
+import { Form } from "react-router-dom";
+
 
 const BookingInfo = (props: IBookingProps) => {
   const [findbooking, setFindBooking] = useState<ICustomer>();
@@ -50,11 +53,11 @@ export const Bookings = () => {
   });
 
   return (
-    <section>
-      <form id="searchForm" onSubmit={handleSubmit}>
+    <Section>
+      <FormWrapper id="searchForm" onSubmit={handleSubmit}>
         <p>Sök bokning</p>
-        <div>
-          <input
+        <InputDiv>
+          <Input
             type="text"
             id="findbooking"
             value={findbooking}
@@ -64,11 +67,11 @@ export const Bookings = () => {
           />
 
           <button>Sök</button>
-        </div>
-      </form>
-      <button onClick={handleclick}>Visa alla</button>
-      <div id="bookingContainer"></div>
-      <table>
+        </InputDiv>
+      </FormWrapper>
+      <Btn onClick={handleclick}>Visa alla</Btn>
+      <BookingContainer id="bookingContainer"></BookingContainer>
+      <Table>
         <thead>
           <tr>
             <th>Bokning ID</th>
@@ -82,8 +85,8 @@ export const Bookings = () => {
             <th>Telefon</th>
           </tr>
         </thead>
-        <tbody>{bookingsHtml}</tbody>
-      </table>
-    </section>
+        <Tbody>{bookingsHtml}</Tbody>
+      </Table>
+    </Section>
   );
 };

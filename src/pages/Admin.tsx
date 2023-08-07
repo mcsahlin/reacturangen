@@ -48,7 +48,7 @@ export const Admin = () => {
               <BodyTd>{}</BodyTd>
               {/* <DeleteIcon onClick={() => handleDelete()}>
 						<AiFillDelete />
-						</DeleteIcon> */}
+						</DeleteIcon> */ }
             </BodyTr>
           </AdimnBody>
         </AdminTable>

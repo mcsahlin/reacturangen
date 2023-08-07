@@ -4,6 +4,9 @@ import Swal from "sweetalert2";
 import { format, isBefore, isAfter } from "date-fns";
 import { IBookingSmall } from "../models/IBookingSmall";
 import { BASE_URL, restaurantId } from "../services/restaurantService";
+import { BookingDiv, DateDiv, GuestDiv, Input, Label, Search, Select, TimeDiv } from "./styled/BookingFormStyle";
+import Booking from "../pages/Booking";
+
 
 export const BookingForm = () => {
   // const [admin, setAdmin] = useState(false);
@@ -142,9 +145,10 @@ export const BookingForm = () => {
   // //#endregion getCustomer
 
   return (
-    <div>
-      <label htmlFor="date">Datum:</label>
-      <input
+    <BookingDiv>
+      <DateDiv>
+      <Label htmlFor="date">Datum:</Label>
+      <Input
         type="date"
         id="date"
         value={date}
@@ -152,9 +156,11 @@ export const BookingForm = () => {
         required
         onChange={(e) => setDate(e.target.value)}
       />
+      </DateDiv>
 
-      <label htmlFor="time">Tid:</label>
-      <select
+      <TimeDiv>
+      <Label htmlFor="time">Tid:</Label>
+      <Select
         id="time"
         value={time}
         onChange={(e) => setTime(e.target.value)}
@@ -162,10 +168,12 @@ export const BookingForm = () => {
       >
         <option value="18:00">18:00</option>
         <option value="21:00">21:00</option>
-      </select>
+      </Select>
+      </TimeDiv>
 
-      <label htmlFor="numberOfGuests">Antal gäster:</label>
-      <input
+      <GuestDiv>
+      <Label htmlFor="numberOfGuests">Antal gäster:</Label>
+      <Input
         type="number"
         id="numberOfGuest"
         min="1"
@@ -174,8 +182,9 @@ export const BookingForm = () => {
         value={numberOfGuests}
         onChange={(e) => setNumberOfGuests(Number(e.target.value))}
       />
-
-      <button onClick={handleSearch}>Sök</button>
+      </GuestDiv>
+    
+      <Search onClick={handleSearch}>Sök</Search>
       {showBookingForm && (
         <form onSubmit={handleSubmit}>
           <h2>
@@ -188,7 +197,7 @@ export const BookingForm = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-          />
+            />
 
           <label htmlFor="lastname">Efternamn:</label>
           <input
@@ -197,7 +206,7 @@ export const BookingForm = () => {
             value={lastname}
             onChange={(e) => setLastName(e.target.value)}
             required
-          />
+            />
 
           <label htmlFor="email">E-post:</label>
           <input
@@ -206,20 +215,21 @@ export const BookingForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          />
+            />
 
           <label htmlFor="phone">Telefonnummer:</label>
           <input
             type="text"
             id="phone"
             value={phone}
-            onChange={(e) => setLastName(e.target.value)}
+            onChange={(e) => setPhone(e.target.value)}
             required
-          />
+            />
           <button type="submit">Skapa bokning</button>
         </form>
       )}
-    </div>
+      </BookingDiv>
+    
   );
 };
 
