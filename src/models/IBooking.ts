@@ -3,6 +3,6 @@ export interface IBooking {
   restaurantId: string;
   date: string;
   time: string;
-  numberOfGuest: number;
+  numberOfGuests: number;
   customerId: string;
 }

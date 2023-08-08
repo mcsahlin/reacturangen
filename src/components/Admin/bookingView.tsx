@@ -4,9 +4,18 @@ import { ICustomer } from "../../models/ICustomer";
 import { get_bookings, get_customers } from "../../services/restaurantService";
 import { Booking } from "../Admin/bookingModel";
 import { IBooking } from "../../models/IBooking";
-import { BookingContainer, Input, InputDiv, Section, Table, Tbody, FormWrapper, Btn } from "../styled/NewAdminStyle";
+import {
+  BookingContainer,
+  Input,
+  InputDiv,
+  Section,
+  Table,
+  Tbody,
+  FormWrapper,
+  Btn,
+  ThTitles,
+} from "../styled/NewAdminStyle";
 import { Form } from "react-router-dom";
-
 
 const BookingInfo = (props: IBookingProps) => {
   const [findbooking, setFindBooking] = useState<ICustomer>();
@@ -72,19 +81,19 @@ export const Bookings = () => {
       <Btn onClick={handleclick}>Visa alla</Btn>
       <BookingContainer id="bookingContainer"></BookingContainer>
       <Table>
-        <thead>
+        <>
           <tr>
-            <th>Bokning ID</th>
-            <th>Datum</th>
-            <th>Tid</th>
-            <th>Gäster</th>
-            <th>ID</th>
-            <th>Förnamn</th>
-            <th>Efternamn</th>
-            <th>E-mail</th>
-            <th>Telefon</th>
+            <ThTitles>Bokning ID</ThTitles>
+            <ThTitles>Datum</ThTitles>
+            <ThTitles>Tid</ThTitles>
+            <ThTitles>Gäster</ThTitles>
+            <ThTitles>ID</ThTitles>
+            <ThTitles>Förnamn</ThTitles>
+            <ThTitles>Efternamn</ThTitles>
+            <ThTitles>E-mail</ThTitles>
+            <ThTitles>Telefon</ThTitles>
           </tr>
-        </thead>
+        </>
         <Tbody>{bookingsHtml}</Tbody>
       </Table>
     </Section>
