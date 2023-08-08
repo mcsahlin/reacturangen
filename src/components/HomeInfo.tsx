@@ -4,7 +4,7 @@ import {
   TextWrapper,
   Wrapper,
 } from "./styled/Wrappers";
-import MeatPic from "../assets/img/meat-3.jpeg";
+import MeatPic from '../assets/img/meat-3.jpg';
 
 export const HomeInfo = () => {
   return (

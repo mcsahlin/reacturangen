@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeVideo from '../assets/video/new-cutting-video.mp4';
+import HomeVideo from '../assets/video/cuttingMeat.mp4'
 import { H1 } from './styled/FrontHeader';
 import { VideoWrapper, Wrapper } from './styled/Wrappers';
 

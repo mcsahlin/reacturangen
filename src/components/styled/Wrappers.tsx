@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Meat from '../../assets/img/meat-2.jpeg';
+import Meat from '../../assets/img/meat-2.jpg';
 
 export const ContactInfoWrapper = styled.article`
 	display: flex;
