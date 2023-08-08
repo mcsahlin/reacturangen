@@ -15,7 +15,6 @@ import {
   Btn,
   ThTitles,
 } from "../styled/NewAdminStyle";
-import { Form } from "react-router-dom";
 
 const BookingInfo = (props: IBookingProps) => {
   const [findbooking, setFindBooking] = useState<ICustomer>();
