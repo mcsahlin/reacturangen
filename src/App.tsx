@@ -1,25 +1,22 @@
-import { useEffect, useState } from 'react';
-import './App.css';
-import { Outlet } from 'react-router-dom';
-import { initBiz } from './services/restaurantService';
-import { Navbar } from './components/pages/Navbar';
+import "./App.css";
+import { Outlet } from "react-router-dom";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 
 function App() {
-	useEffect(() => {
-		initBiz(); // Initalize company database
-	});
-
-	return (
-		<>
-			<header>
-				<Navbar />
-			</header>
-			<main>
-				<Outlet></Outlet>
-			</main>
-			<footer></footer>
-		</>
-	);
+  return (
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <Outlet></Outlet>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  );
 }
 
 export default App;

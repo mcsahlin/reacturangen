@@ -1,63 +1,43 @@
-import axios, { AxiosResponse } from 'axios';
-import { IBiz } from '../models/IBiz';
+import axios from "axios";
+import { IBooking } from "../models/IBooking";
+import { ICustomer } from "../models/ICustomer";
 
 //**** KEYS ****//
-const BASE_URL: string = 'https://school-restaurant-api.azurewebsites.net';
-let keyHolder: string = '';
-const bizKey: string = keyHolder;
-let bookingId: string = ''; //! Placeholder - value should be assigned by function
-let customerId: string = ''; //! Placeholder - value should be assigned by function
+export const restaurantId: string = `623b85d54396b96c57bde7c3`;
+export const BASE_URL: string = `https://school-restaurant-api.azurewebsites.net/`;
 
 //**** GET ****//
-const getRestaurant: string = `/restaurant${bizKey}`;
-const getAllBookings: string = `/booking/restaurant/${bizKey}`;
-const getBooking: string = `/booking/${bookingId}`; //! Not static! (bookingId)
-const getCustomer: string = `/booking/${customerId}`; //! Not static! (customerId)
-
-//**** POST ****//
-export const createRestaurant: string = '/restaurant/create';
-const createCustomer: string = '/customer/create';
-const createBooking: string = '/booking/create';
-
-//**** PUT ****//**** ADMIN ****//
-const updateBooking: string = `/booking/update${bookingId}`; //! Not static! (bookingId)
-const updateCustomer: string = `/customer/update${customerId}`; //! Not static! (customerId)
-
-//**** DELETE ****//**** ADMIN ****//
-const deleteBooking: string = `/booking/delete${bookingId}`; //! Not static! (bookingId)
-
-//---------------------------------------------------------------------------//
-
-export const initBiz = () => {
-	const res = axios
-		.post(`${BASE_URL}${createRestaurant}`, {
-			name: 'Reacturangen',
-			address: {
-				street: 'Reactsvängen 101',
-				zip: '101 23',
-				city: 'Stockholm',
-			},
-		})
-		.then((res) => {
-			return res.data;
-		})
-		.catch((err) => {
-			console.log(err);
-		});
-	res.then((key) => {
-		keyHolder = key;
-	});
+export const get_bookings = async () => {
+  let response = await axios.get(
+    `${BASE_URL}booking/restaurant/${restaurantId}`
+  );
+  return response.data;
 };
 
-// TODO# Base call, ready
-// const callApi = async <T>(url: string) => {
-// 	let response = await axios.get<T>(`${BASE_URL}${url}`);
-// 	return response.data;
-// };
+export const get_Booking = async (bookingId: string) => {
+  let response = await axios.get(`${BASE_URL}booking/${bookingId}`);
 
-export const getBiz = async (): Promise<AxiosResponse<IBiz>> => {
-	let response = await axios.get<AxiosResponse<IBiz>>(
-		`${BASE_URL + getRestaurant}`
-	);
-	return response.data;
+  return response.data as IBooking;
+};
+export const GET_CUSTOMER_URL: string = `${BASE_URL}booking/`;
+
+export const get_customers = async (id: string): Promise<ICustomer[]> => {
+  let response = await axios.get<ICustomer[]>(`${BASE_URL}/customer/` + id);
+
+  return response.data;
+};
+
+//*****POST*****//
+export const create_customer = async () => {
+  let response = await axios.post(`${BASE_URL}/booking/create`);
+
+  return response.data;
+};
+
+//*****DELETE*****//
+
+export const deleteBooking = async (bookingId: string): Promise<boolean> => {
+  let response = await axios.delete(`${BASE_URL}/booking/delete/${bookingId}`);
+
+  return response.status === 200;
 };

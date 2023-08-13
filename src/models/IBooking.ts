@@ -1,7 +1,8 @@
 export interface IBooking {
-	id: number;
-	name: string;
-	lastName: string;
-	email: string;
-	phone: string;
+  _id: string;
+  restaurantId: string;
+  date: string;
+  time: string;
+  numberOfGuests: number;
+  customerId: string;
 }
