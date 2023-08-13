@@ -2,7 +2,7 @@ import { IBookingProps } from "../../models/IBookingProps";
 import { useEffect, useState, ChangeEvent, FormEvent } from "react";
 import { ICustomer } from "../../models/ICustomer";
 import { get_bookings, get_customers } from "../../services/restaurantService";
-import { Booking } from "../Admin/bookingModel";
+import { Booking } from "./bookingModel";
 import { IBooking } from "../../models/IBooking";
 import {
   BookingContainer,

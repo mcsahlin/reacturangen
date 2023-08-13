@@ -4,7 +4,8 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  margin-bottom: 10rem;
 `;
 export const FormWrapper = styled.form`
   margin: 1rem;

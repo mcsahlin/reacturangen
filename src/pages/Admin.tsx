@@ -1,4 +1,4 @@
-import { Bookings } from "../components/Admin/bookingView";
+import { Bookings } from "../components/Admin/AdminView";
 
 export const Admin = () => {
   return (

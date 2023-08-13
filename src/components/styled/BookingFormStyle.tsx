@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BookingDiv = styled.div`
   margin: 2rem;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
